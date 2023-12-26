@@ -13,9 +13,8 @@
 		6B7E94B32B39F46B00170816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E94B12B39F46B00170816 /* Main.storyboard */; };
 		6B7E94B52B39F46F00170816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E94B42B39F46F00170816 /* Assets.xcassets */; };
 		6B7E94B82B39F46F00170816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E94B62B39F46F00170816 /* LaunchScreen.storyboard */; };
-		6B7E94C32B39F47000170816 /* cutletQuestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94C22B39F47000170816 /* cutletQuestAppTests.swift */; };
-		6B7E94CD2B39F47000170816 /* cutletQuestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94CC2B39F47000170816 /* cutletQuestAppUITests.swift */; };
-		6B7E94CF2B39F47000170816 /* cutletQuestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94CE2B39F47000170816 /* cutletQuestAppUITestsLaunchTests.swift */; };
+		6B7E94DC2B3A676700170816 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94DB2B3A676600170816 /* Product.swift */; };
+		6B7E94E32B3B358600170816 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94E22B3B358600170816 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +44,9 @@
 		6B7E94B72B39F46F00170816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B7E94B92B39F46F00170816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B7E94BE2B39F47000170816 /* cutletQuestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cutletQuestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B7E94C22B39F47000170816 /* cutletQuestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cutletQuestAppTests.swift; sourceTree = "<group>"; };
 		6B7E94C82B39F47000170816 /* cutletQuestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cutletQuestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B7E94CC2B39F47000170816 /* cutletQuestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cutletQuestAppUITests.swift; sourceTree = "<group>"; };
-		6B7E94CE2B39F47000170816 /* cutletQuestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cutletQuestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B7E94DB2B3A676600170816 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		6B7E94E22B3B358600170816 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				6B7E94AA2B39F46B00170816 /* cutletQuestApp */,
-				6B7E94C12B39F47000170816 /* cutletQuestAppTests */,
-				6B7E94CB2B39F47000170816 /* cutletQuestAppUITests */,
+				6B7E94E22B3B358600170816 /* DataStore.swift */,
 				6B7E94A92B39F46B00170816 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,9 +96,10 @@
 		6B7E94AA2B39F46B00170816 /* cutletQuestApp */ = {
 			isa = PBXGroup;
 			children = (
+				6B7E94DD2B3A67D900170816 /* Models */,
 				6B7E94AB2B39F46B00170816 /* AppDelegate.swift */,
 				6B7E94AD2B39F46B00170816 /* SceneDelegate.swift */,
-				6B7E94AF2B39F46B00170816 /* ViewController.swift */,
+				6BA2788B2B3B5708007D56E8 /* ViewControllers */,
 				6B7E94B12B39F46B00170816 /* Main.storyboard */,
 				6B7E94B42B39F46F00170816 /* Assets.xcassets */,
 				6B7E94B62B39F46F00170816 /* LaunchScreen.storyboard */,
@@ -110,21 +108,20 @@
 			path = cutletQuestApp;
 			sourceTree = "<group>";
 		};
-		6B7E94C12B39F47000170816 /* cutletQuestAppTests */ = {
+		6B7E94DD2B3A67D900170816 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6B7E94C22B39F47000170816 /* cutletQuestAppTests.swift */,
+				6B7E94DB2B3A676600170816 /* Product.swift */,
 			);
-			path = cutletQuestAppTests;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		6B7E94CB2B39F47000170816 /* cutletQuestAppUITests */ = {
+		6BA2788B2B3B5708007D56E8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6B7E94CC2B39F47000170816 /* cutletQuestAppUITests.swift */,
-				6B7E94CE2B39F47000170816 /* cutletQuestAppUITestsLaunchTests.swift */,
+				6B7E94AF2B39F46B00170816 /* ViewController.swift */,
 			);
-			path = cutletQuestAppUITests;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +256,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B7E94B02B39F46B00170816 /* ViewController.swift in Sources */,
+				6B7E94DC2B3A676700170816 /* Product.swift in Sources */,
 				6B7E94AC2B39F46B00170816 /* AppDelegate.swift in Sources */,
+				6B7E94E32B3B358600170816 /* DataStore.swift in Sources */,
 				6B7E94AE2B39F46B00170816 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7E94C32B39F47000170816 /* cutletQuestAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7E94CF2B39F47000170816 /* cutletQuestAppUITestsLaunchTests.swift in Sources */,
-				6B7E94CD2B39F47000170816 /* cutletQuestAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,15 +436,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K43DRLV8K3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cutletQuestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,9 +454,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AleksandrGoncharov.cutletQuestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -467,15 +469,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K43DRLV8K3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cutletQuestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,9 +487,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = AleksandrGoncharov.cutletQuestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
