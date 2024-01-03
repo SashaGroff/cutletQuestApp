@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B1485212B450A4600347171 /* TabBarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485202B450A4600347171 /* TabBarSB.storyboard */; };
-		6B1485242B450CA000347171 /* WelcomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485232B450CA000347171 /* WelcomeSB.storyboard */; };
-		6B1485262B450CB200347171 /* MenuSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485252B450CB200347171 /* MenuSB.storyboard */; };
-		6B1485282B450CE100347171 /* CartSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485272B450CE100347171 /* CartSB.storyboard */; };
-		6B14852A2B450D0200347171 /* AboutUsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485292B450D0200347171 /* AboutUsSB.storyboard */; };
+		6B14852D2B45ACC400347171 /* WelcomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */; };
+		6B14852F2B45AD6300347171 /* MenuSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B14852E2B45AD6300347171 /* MenuSB.storyboard */; };
+		6B1485312B45AFAC00347171 /* AboutUsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */; };
+		6B1485332B45B00F00347171 /* CartSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485322B45B00F00347171 /* CartSB.storyboard */; };
 		6B7E94AC2B39F46B00170816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94AB2B39F46B00170816 /* AppDelegate.swift */; };
 		6B7E94AE2B39F46B00170816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94AD2B39F46B00170816 /* SceneDelegate.swift */; };
 		6B7E94B02B39F46B00170816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94AF2B39F46B00170816 /* ViewController.swift */; };
@@ -39,11 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B1485202B450A4600347171 /* TabBarSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarSB.storyboard; sourceTree = "<group>"; };
-		6B1485232B450CA000347171 /* WelcomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeSB.storyboard; sourceTree = "<group>"; };
-		6B1485252B450CB200347171 /* MenuSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSB.storyboard; sourceTree = "<group>"; };
-		6B1485272B450CE100347171 /* CartSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartSB.storyboard; sourceTree = "<group>"; };
-		6B1485292B450D0200347171 /* AboutUsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUsSB.storyboard; sourceTree = "<group>"; };
+		6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeSB.storyboard; sourceTree = "<group>"; };
+		6B14852E2B45AD6300347171 /* MenuSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSB.storyboard; sourceTree = "<group>"; };
+		6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUsSB.storyboard; sourceTree = "<group>"; };
+		6B1485322B45B00F00347171 /* CartSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartSB.storyboard; sourceTree = "<group>"; };
 		6B7E94A82B39F46B00170816 /* cutletQuestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cutletQuestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7E94AB2B39F46B00170816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B7E94AD2B39F46B00170816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,11 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				6B7E94B12B39F46B00170816 /* Main.storyboard */,
-				6B1485292B450D0200347171 /* AboutUsSB.storyboard */,
-				6B1485272B450CE100347171 /* CartSB.storyboard */,
-				6B1485252B450CB200347171 /* MenuSB.storyboard */,
-				6B1485232B450CA000347171 /* WelcomeSB.storyboard */,
-				6B1485202B450A4600347171 /* TabBarSB.storyboard */,
+				6B1485322B45B00F00347171 /* CartSB.storyboard */,
+				6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */,
+				6B14852E2B45AD6300347171 /* MenuSB.storyboard */,
+				6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */,
 				6B7E94B62B39F46F00170816 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -256,14 +253,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B14852D2B45ACC400347171 /* WelcomeSB.storyboard in Resources */,
 				6B7E94B82B39F46F00170816 /* LaunchScreen.storyboard in Resources */,
-				6B1485242B450CA000347171 /* WelcomeSB.storyboard in Resources */,
-				6B1485262B450CB200347171 /* MenuSB.storyboard in Resources */,
-				6B14852A2B450D0200347171 /* AboutUsSB.storyboard in Resources */,
 				6B7E94B52B39F46F00170816 /* Assets.xcassets in Resources */,
-				6B1485282B450CE100347171 /* CartSB.storyboard in Resources */,
+				6B1485312B45AFAC00347171 /* AboutUsSB.storyboard in Resources */,
+				6B1485332B45B00F00347171 /* CartSB.storyboard in Resources */,
+				6B14852F2B45AD6300347171 /* MenuSB.storyboard in Resources */,
 				6B7E94B32B39F46B00170816 /* Main.storyboard in Resources */,
-				6B1485212B450A4600347171 /* TabBarSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
