@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Product {
+struct Product: Equatable {
     var name: String
     var ingredient: String
     var productImage: String

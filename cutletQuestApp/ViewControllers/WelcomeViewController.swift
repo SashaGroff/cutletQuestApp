@@ -38,7 +38,7 @@ final class WelcomeViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "loginButton" {
-            guard loginPhoneTF.text == User().userLogin, passwordTF.text == User().userPassword else {
+            guard loginPhoneTF.text == User().login, passwordTF.text == User().userPassword else {
                 showAlert(
                     withTitle: "Неверный логин или пароль!",
                     andMessage: "Пожалуйста, введите корректные данные."
@@ -53,7 +53,7 @@ final class WelcomeViewController: UIViewController {
     @IBAction func forgotPasswordAction() {
         showAlert(
             withTitle: "Oops!",
-            andMessage: "Твой логин: \(User().userLogin), пароль: \(User().userPassword) 😉"
+            andMessage: "Твой логин: \(User().login), пароль: \(User().userPassword) 😉"
         )
     }
     
