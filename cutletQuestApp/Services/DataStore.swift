@@ -28,7 +28,7 @@ final class DataStore {
         return true
     }
     
-    private func doesUserExist(login: String) -> Bool {
+    func doesUserExist(login: String) -> Bool {
         users.contains{ $0.login == login }
     }
     

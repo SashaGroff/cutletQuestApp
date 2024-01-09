@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct User {
+class User {
     let login: String
     let password: String
-    
+    let name: String
     let basket: Basket
     
-    init(login: String, password: String) {
+    init(login: String, password: String, name: String) {
         self.login = login
         self.password = password
-        
+        self.name = name
         self.basket = Basket()
     }
 }
@@ -24,12 +24,12 @@ struct User {
 struct Basket {
     private var products = [Product]()
     
-    mutating func addToBasket(product: Product) {
-        products.append(product)
-    }
-    
     func getBasket() -> [Product] {
         return products
+    }
+    
+    mutating func addToBasket(product: Product) {
+        products.append(product)
     }
     
     mutating func clearAllBasket() {

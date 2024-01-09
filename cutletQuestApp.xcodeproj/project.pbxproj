@@ -21,6 +21,7 @@
 		6B7E94B82B39F46F00170816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7E94B62B39F46F00170816 /* LaunchScreen.storyboard */; };
 		6B7E94DC2B3A676700170816 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7E94DB2B3A676600170816 /* Product.swift */; };
 		88C1CDE52B4DBF300044EB9F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1CDE42B4DBF300044EB9F /* DataStore.swift */; };
+		88C1CDE92B4DDCC50044EB9F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1CDE82B4DDCC50044EB9F /* SessionManager.swift */; };
 		C448857E2B45BB9F001B52A1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448857D2B45BB9F001B52A1 /* WelcomeViewController.swift */; };
 		C4BCBE482B45E60E002D2327 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCBE472B45E60E002D2327 /* RegistrationViewController.swift */; };
 		C4BCBE4A2B46062C002D2327 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCBE492B46062C002D2327 /* User.swift */; };
@@ -62,6 +63,7 @@
 		6B7E94C82B39F47000170816 /* cutletQuestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cutletQuestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7E94DB2B3A676600170816 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		88C1CDE42B4DBF300044EB9F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		88C1CDE82B4DDCC50044EB9F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		C448857D2B45BB9F001B52A1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C4BCBE472B45E60E002D2327 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		C4BCBE492B46062C002D2327 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				88C1CDE42B4DBF300044EB9F /* DataStore.swift */,
+				88C1CDE82B4DDCC50044EB9F /* SessionManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				6B7E94AC2B39F46B00170816 /* AppDelegate.swift in Sources */,
 				6B7E94AE2B39F46B00170816 /* SceneDelegate.swift in Sources */,
 				C4BCBE4A2B46062C002D2327 /* User.swift in Sources */,
+				88C1CDE92B4DDCC50044EB9F /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
