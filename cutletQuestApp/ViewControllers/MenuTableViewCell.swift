@@ -20,9 +20,9 @@ class MenuTableViewCell: UITableViewCell {
     }
     
     func configureCell(burger: Product) {
-        productImage.image = UIImage(named: burger.productImage)
+        productImage.image = UIImage(named: burger.pictureURL)
         productName.text = burger.name
-        productDescription.text = burger.ingredient
+        productDescription.text = burger.description
         productPrice.setTitle(burger.price, for: .normal)
     }
 }

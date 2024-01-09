@@ -36,26 +36,26 @@ final class WelcomeViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "loginButton" {
-            guard loginPhoneTF.text == User().login, passwordTF.text == User().userPassword else {
-                showAlert(
-                    withTitle: "Неверный логин или пароль!",
-                    andMessage: "Пожалуйста, введите корректные данные."
-                )
-                return false
-            }
-        }
-        return true
-    }
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if identifier == "loginButton" {
+//            guard loginPhoneTF.text == User().login, passwordTF.text == User().userPassword else {
+//                showAlert(
+//                    withTitle: "Неверный логин или пароль!",
+//                    andMessage: "Пожалуйста, введите корректные данные."
+//                )
+//                return false
+//            }
+//        }
+//        return true
+//    }
     
     // MARK: - IB Actions
-    @IBAction func forgotPasswordAction() {
-        showAlert(
-            withTitle: "Oops!",
-            andMessage: "Твой логин: \(User().login), пароль: \(User().userPassword) 😉"
-        )
-    }
+//    @IBAction func forgotPasswordAction() {
+//        showAlert(
+//            withTitle: "Oops!",
+//            andMessage: "Твой логин: \(User().login), пароль: \(User().userPassword) 😉"
+//        )
+//    }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         loginPhoneTF.text = ""
