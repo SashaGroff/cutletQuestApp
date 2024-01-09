@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+class User {
     let login: String
     let password: String
     
@@ -24,12 +24,12 @@ struct User {
 struct Basket {
     private var products = [Product]()
     
-    mutating func addToBasket(product: Product) {
-        products.append(product)
-    }
-    
     func getBasket() -> [Product] {
         return products
+    }
+    
+    mutating func addToBasket(product: Product) {
+        products.append(product)
     }
     
     mutating func clearAllBasket() {
