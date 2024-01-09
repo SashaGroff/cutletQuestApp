@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+final class MenuTableViewController: UITableViewController {
     var burger = Burger()
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuTableViewCell: UITableViewCell {
+final class MenuTableViewCell: UITableViewCell {
 
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var productName: UILabel!
