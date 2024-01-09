@@ -10,13 +10,13 @@ import Foundation
 class User {
     let login: String
     let password: String
-    
+    let name: String
     let basket: Basket
     
-    init(login: String, password: String) {
+    init(login: String, password: String, name: String) {
         self.login = login
         self.password = password
-        
+        self.name = name
         self.basket = Basket()
     }
 }
