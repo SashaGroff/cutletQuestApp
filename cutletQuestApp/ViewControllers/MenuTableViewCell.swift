@@ -8,7 +8,7 @@
 import UIKit
 
 final class MenuTableViewCell: UITableViewCell {
-
+    // MARK: - IB Outlets
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var productName: UILabel!
     @IBOutlet var productDescription: UILabel!
@@ -18,10 +18,11 @@ final class MenuTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
+    // MARK: - IB Actions
     @IBAction func addToBasketButton() {
     }
     
+    // MARK: - Public Methods
     func configureCell(burger: Product) {
         productImage.image = UIImage(named: burger.pictureURL)
         productName.text = burger.name
