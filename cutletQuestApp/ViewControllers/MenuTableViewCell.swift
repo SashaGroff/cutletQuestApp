@@ -19,10 +19,13 @@ class MenuTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    @IBAction func addToBasketButton() {
+    }
+    
     func configureCell(burger: Product) {
         productImage.image = UIImage(named: burger.pictureURL)
         productName.text = burger.name
         productDescription.text = burger.description
-        productPrice.setTitle(burger.price, for: .normal)
+        productPrice.setTitle(burger.price.formatted(), for: .normal)
     }
 }
