@@ -11,18 +11,18 @@ final class DataStore {
     static let shared = DataStore()
     
     private var users = [
-        User(login: "Alex", password: "123"),
-        User(login: "Rustam", password: "123")
+        User(login: "+79826543211", password: "123", name: "Alex"),
+        User(login: "+79050019855", password: "123", name: "Rustam")
     ]
     
     func getUser(login: String, password: String) -> User? {
         users.first { $0.login == login && $0.password == password }
     }
     
-    func createUser(login: String, password: String) -> Bool {
+    func createUser(login: String, password: String, name: String) -> Bool {
         guard !doesUserExist(login: login) else { return false }
         
-        let user = User(login: login, password: password)
+        let user = User(login: login, password: password, name: name)
         users.append(user)
         
         return true
