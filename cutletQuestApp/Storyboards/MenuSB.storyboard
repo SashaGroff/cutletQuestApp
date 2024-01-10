@@ -81,6 +81,53 @@
                                     <outlet property="productPrice" destination="keM-44-QPa" id="jCo-kn-jAJ"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quizCell" rowHeight="165" id="oQs-yW-Inc" userLabel="quizCell" customClass="QuizTableViewCell" customModule="cutletQuestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="240" width="393" height="165"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oQs-yW-Inc" id="7g1-eB-mOL">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ничего не понравилось?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRL-R6-bVr">
+                                            <rect key="frame" x="28" y="11" width="337" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пройдите наш тест и подберите бургер по вашим вкусовым предпочтениям!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-Eq-CsS">
+                                            <rect key="frame" x="8" y="40" width="377" height="33.666666666666657"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" systemColor="systemGray2Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gom-0w-u1g">
+                                            <rect key="frame" x="131.66666666666666" y="120" width="129.99999999999997" height="34"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Пройти квиз!">
+                                                <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="quizButtonPressed" destination="oQs-yW-Inc" eventType="touchUpInside" id="zN6-nZ-loM"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="bzg-Eq-CsS" secondAttribute="trailing" constant="8" id="HGz-J6-mew"/>
+                                        <constraint firstItem="bzg-Eq-CsS" firstAttribute="leading" secondItem="7g1-eB-mOL" secondAttribute="leading" constant="8" id="QfS-6K-6H8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="MRL-R6-bVr" secondAttribute="trailing" constant="8" id="SnP-uJ-6cz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gom-0w-u1g" secondAttribute="bottom" id="cpQ-Zn-HUW"/>
+                                        <constraint firstItem="bzg-Eq-CsS" firstAttribute="top" secondItem="MRL-R6-bVr" secondAttribute="bottom" constant="8" id="hwg-Ym-Y0S"/>
+                                        <constraint firstItem="MRL-R6-bVr" firstAttribute="leading" secondItem="7g1-eB-mOL" secondAttribute="leadingMargin" constant="8" id="iXy-IW-FWq"/>
+                                        <constraint firstItem="MRL-R6-bVr" firstAttribute="top" secondItem="7g1-eB-mOL" secondAttribute="topMargin" id="tAc-OB-Z0p"/>
+                                        <constraint firstItem="gom-0w-u1g" firstAttribute="centerX" secondItem="7g1-eB-mOL" secondAttribute="centerX" id="xGE-yb-Fl2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="bzg-Eq-CsS" id="Vsy-Up-5Uf"/>
+                                    <outlet property="nameLabel" destination="MRL-R6-bVr" id="x4G-Xz-4fM"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="C1d-8b-f1V" id="4Bh-cW-VJQ"/>
@@ -138,10 +185,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
