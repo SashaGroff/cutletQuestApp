@@ -20,6 +20,7 @@ final class MenuTableViewCell: UITableViewCell {
     }
     // MARK: - IB Actions
     @IBAction func addToBasketButton() {
+        print("Добавлено в корзину")
     }
     
     // MARK: - Public Methods
