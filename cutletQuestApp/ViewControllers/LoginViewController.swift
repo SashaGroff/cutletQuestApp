@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class WelcomeViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet var loginPhoneTF: UITextField!
@@ -18,17 +18,13 @@ final class WelcomeViewController: UIViewController {
     // MARK: - Public Properties
 
     // MARK: - Private Properties
-    private let welcomeImage = UIImage(named: "WelcomeImage")
-    //private let newSize = CGSize(width: 1200, height: 1100)
-    private let scale = 2.0
+    
 
     // MARK: - Initializers
     
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLogoView.image = welcomeImage
-        welcomeLogoView.transform = CGAffineTransform(scaleX: scale, y: scale)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
