@@ -11,7 +11,7 @@ final class DataStore {
     static let shared = DataStore()
     
     private var users = [
-        User(login: "+79826543211", password: "123", name: "Alex"),
+        User(login: "1", password: "1", name: "Test"),
         User(login: "+79050019855", password: "123", name: "Rustam")
     ]
     
@@ -30,6 +30,10 @@ final class DataStore {
     
     func doesUserExist(login: String) -> Bool {
         users.contains{ $0.login == login }
+    }
+    
+    func forgotUser(login: String) -> String? {
+        users.first { $0.login == login }?.password
     }
     
     private init() {}

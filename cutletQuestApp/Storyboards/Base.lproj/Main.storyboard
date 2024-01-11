@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Uo-x5-Law">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gMx-eM-tnW">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="nVe-8u-m7o">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1Uo-x5-Law" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="1Uo-x5-Law" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lc3-YN-M0w"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cn3-sd-Nr9">
@@ -18,7 +20,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9Bh-Fu-aKY" kind="relationship" relationship="viewControllers" id="vDk-UC-xSf"/>
                         <segue destination="8VO-oO-oqf" kind="relationship" relationship="viewControllers" id="GJg-HV-Faa"/>
                         <segue destination="9A2-du-Qca" kind="relationship" relationship="viewControllers" id="iMW-ZD-0pV"/>
                         <segue destination="XgH-Vd-zdL" kind="relationship" relationship="viewControllers" id="2Az-7u-Rf2"/>
@@ -27,16 +28,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NY3-Fa-YML" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="901.52671755725191" y="3.5211267605633805"/>
-        </scene>
-        <!--WelcomeVC-->
-        <scene sceneID="uNw-jT-2jh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="WelcomeSB" referencedIdentifier="WelcomeVC" id="9Bh-Fu-aKY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="q6g-ah-o6r"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GSn-dv-mjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1536" y="432"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="CSu-rS-I6P">
@@ -68,5 +59,116 @@
             </objects>
             <point key="canvasLocation" x="1438" y="-457"/>
         </scene>
+        <!--Профиль-->
+        <scene sceneID="0Rn-kX-Rce">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeVC" id="gMx-eM-tnW" customClass="WelcomeViewController" customModule="cutletQuestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JS1-s2-0b5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-Lo-FMl">
+                                <rect key="frame" x="48" y="308" width="297" height="236"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PLc-2G-QOA">
+                                        <rect key="frame" x="0.0" y="0.0" width="297" height="140.66666666666666"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите номер телефона,                 чтоб войти в личный кабинет." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b6-G3-7py">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="40.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ваш номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KA9-Eo-CLy">
+                                                <rect key="frame" x="0.0" y="56.666666666666686" width="297" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2He-FO-okx">
+                                                <rect key="frame" x="0.0" y="106.66666666666669" width="297" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="loginbutton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5W8-yR-392">
+                                        <rect key="frame" x="0.0" y="156.66666666666669" width="297" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Войти"/>
+                                        <connections>
+                                            <action selector="loginButtonTapped" destination="gMx-eM-tnW" eventType="touchUpInside" id="JBt-b9-ju3"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="Gbd-1D-odQ">
+                                        <rect key="frame" x="0.0" y="207" width="297" height="29"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh7-ze-8JC">
+                                                <rect key="frame" x="0.0" y="0.0" width="110" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="hzl-Ro-xEG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Забыли пароль?"/>
+                                                <connections>
+                                                    <action selector="forgotPassword" destination="gMx-eM-tnW" eventType="touchUpInside" id="RGR-TT-keN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89b-dc-DNA">
+                                                <rect key="frame" x="162" y="0.0" width="135" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="135" id="Pth-GI-8je"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Зарегистриоваться"/>
+                                                <connections>
+                                                    <action selector="registrationButtonTapped" destination="gMx-eM-tnW" eventType="touchUpInside" id="IkZ-hv-ea6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="89b-dc-DNA" firstAttribute="leading" secondItem="sh7-ze-8JC" secondAttribute="trailing" constant="52" id="rMj-LS-Bl4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomeImage" translatesAutoresizingMaskIntoConstraints="NO" id="4NU-JS-2kF">
+                                <rect key="frame" x="64" y="159" width="265" height="133"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d2g-v0-gI3"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="IhP-Lo-FMl" firstAttribute="top" secondItem="4NU-JS-2kF" secondAttribute="bottom" constant="16" id="1vI-h8-srR"/>
+                            <constraint firstItem="IhP-Lo-FMl" firstAttribute="leading" secondItem="d2g-v0-gI3" secondAttribute="leading" constant="48" id="GQK-Fn-XHw"/>
+                            <constraint firstItem="4NU-JS-2kF" firstAttribute="leading" secondItem="d2g-v0-gI3" secondAttribute="leading" constant="64" id="Qsl-V6-gKi"/>
+                            <constraint firstItem="d2g-v0-gI3" firstAttribute="trailing" secondItem="IhP-Lo-FMl" secondAttribute="trailing" constant="48" id="gF3-Fq-17A"/>
+                            <constraint firstItem="IhP-Lo-FMl" firstAttribute="centerY" secondItem="JS1-s2-0b5" secondAttribute="centerY" id="gPw-xb-wWf"/>
+                            <constraint firstItem="4NU-JS-2kF" firstAttribute="top" secondItem="d2g-v0-gI3" secondAttribute="top" constant="100" id="w1m-xN-YqF"/>
+                            <constraint firstItem="d2g-v0-gI3" firstAttribute="trailing" secondItem="4NU-JS-2kF" secondAttribute="trailing" constant="64" id="wCO-9m-eqS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="yDJ-Cp-Np6"/>
+                    <navigationItem key="navigationItem" id="K6u-gS-ZZc"/>
+                    <connections>
+                        <outlet property="loginPhoneTF" destination="KA9-Eo-CLy" id="aFb-pX-sx1"/>
+                        <outlet property="passwordTF" destination="2He-FO-okx" id="3zx-Vc-TLJ"/>
+                        <outlet property="welcomeLogoView" destination="4NU-JS-2kF" id="p7i-1G-cmG"/>
+                        <segue destination="1Uo-x5-Law" kind="presentation" identifier="loginButton" modalPresentationStyle="fullScreen" id="ZKO-LW-LpU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6j-oB-ng3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="16"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="WelcomeImage" width="1082" height="832"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -8,27 +8,15 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
-
-    // MARK: - IB Outlets
     @IBOutlet var loginPhoneTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var welcomeLogoView: UIImageView!
     
-    // MARK: - Public Properties
-
-    // MARK: - Private Properties
-    private let welcomeImage = UIImage(named: "WelcomeImage")
-    //private let newSize = CGSize(width: 1200, height: 1100)
-    private let scale = 2.0
-
-    // MARK: - Initializers
-    
-    // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLogoView.image = welcomeImage
-        welcomeLogoView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        loginPhoneTF.delegate = self
+        passwordTF.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -36,46 +24,111 @@ final class WelcomeViewController: UIViewController {
         view.endEditing(true)
     }
     
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if identifier == "loginButton" {
-//            guard loginPhoneTF.text == User().login, passwordTF.text == User().userPassword else {
-//                showAlert(
-//                    withTitle: "Неверный логин или пароль!",
-//                    andMessage: "Пожалуйста, введите корректные данные."
-//                )
-//                return false
-//            }
-//        }
-//        return true
-//    }
-    
-    // MARK: - IB Actions
-//    @IBAction func forgotPasswordAction() {
-//        showAlert(
-//            withTitle: "Oops!",
-//            andMessage: "Твой логин: \(User().login), пароль: \(User().userPassword) 😉"
-//        )
-//    }
-    
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        loginPhoneTF.text = ""
-        passwordTF.text = ""
+    @IBAction func loginButtonTapped() {
+        performUserLogin()
     }
     
-    // MARK: - Public Methods
-
-    // MARK: - Private Methods
+    @IBAction func registrationButtonTapped() {
+        registrationAlert()
+    }
     
-    private func showAlert(withTitle title: String, andMessage message: String) {
+    @IBAction func forgotPassword() {
+        guard let login = loginPhoneTF.text,
+              !login.isEmpty else {
+            showAlert(withTitle: "Ошибка", andMessage: "Введите логин!")
+            return
+        }
+        
+        if let password = DataStore.shared.forgotUser(login: login) {
+            showAlert(withTitle: "Ваш пароль", andMessage: password)
+        } else {
+            showAlert(withTitle: "Sorry!", andMessage: "Такого логина нет!")
+        }
+    }
+    
+    private func performUserLogin() {
+        guard let login = loginPhoneTF.text,
+              let password = passwordTF.text,
+              !login.isEmpty,
+              !password.isEmpty else {
+            showAlert(withTitle: "Ошибка", andMessage: "Заполните все поля")
+            return
+        }
+        
+        if SessionManager.shared.loginUser(login: login, password: password) {
+            loginPhoneTF.text = login
+            passwordTF.text = password
+            performSegue(withIdentifier: "loginButton", sender: nil)
+        } else {
+            showAlert(withTitle: "Sorry!", andMessage: "Неверное имя или пароль!")
+        }
+    }
+}
+
+// MARK: - AlertControllers
+private extension WelcomeViewController {
+    func registrationAlert() {
+        let alert = UIAlertController(title: "Registration", message: nil, preferredStyle: .alert)
+        alert.addTextField{
+            $0.placeholder = "Телефон"
+        }
+        alert.addTextField {
+            $0.placeholder = "Пароль"
+        }
+        alert.addTextField{
+            $0.placeholder = "Имя"}
+        
+        let okAction = UIAlertAction(title: "Создать", style: .destructive) { [unowned self] _ in
+            guard let login = alert.textFields?.first?.text,
+                  let name = alert.textFields?.last?.text,
+                  let password = alert.textFields?[1].text,
+                  !login.isEmpty,
+                  !name.isEmpty,
+                  !password.isEmpty else {
+                showAlert(withTitle: "Ошибка", andMessage: "Заполните все поля")
+                return
+            }
+            
+            if DataStore.shared.createUser(login: login, password: password, name: name) {
+                loginPhoneTF.text = login
+                passwordTF.text = password
+                performSegue(withIdentifier: "loginButton", sender: nil)
+            } else {
+                showAlert(withTitle: "Sorry!", andMessage: "Такой пользователь уже существует!")
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
+    func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(
             title: title,
             message: message,
             preferredStyle: .alert
         )
+        
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.passwordTF.text = ""
         }
+        
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension WelcomeViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == loginPhoneTF {
+            passwordTF.becomeFirstResponder()
+        }else if textField == passwordTF {
+            performUserLogin()
+        }
+        return true
     }
 }
