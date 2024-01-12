@@ -7,23 +7,35 @@
 
 import Foundation
 
-class SessionManager {
+final class SessionManager {
     static let shared = SessionManager()
-    
-    private var currentUser: User?
-    
+
     private init() {}
     
-    func loginUser(login: String, password: String) -> Bool {
-        if let user = DataStore.shared.getUser(login: login, password: password) {
-            currentUser = user
-            return true
+    // MARK: - User
+    func doesUserExist(login: String) -> Bool {
+        DataStore.shared.users.contains{ $0.login == login }
+    }
+
+    func loginUser(login: String, password: String) -> User? {
+        if let currentUser = DataStore.shared.users.first(where: { user in
+            user.login == login && user.password == password
+        }) {
+            return currentUser
         } else {
-            return false
+            return nil
         }
     }
+
+    func createUser(login: String, password: String, name: String) -> User {
+        let user = User(login: login, password: password, name: name)
+        DataStore.shared.users.append(user)
+        
+        return user
+    }
     
-    func getCurrentUser() -> User? {
-        return currentUser
+    // MARK: - Menu
+    func getMenu() -> [Product] {
+        DataStore.shared.menu
     }
 }
