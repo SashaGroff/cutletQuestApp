@@ -24,15 +24,14 @@ final class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if SessionManager.shared.loginUser(login: loginPhoneTF.text ?? "", password: passwordTF.text ?? "") {
-            return true
-        } else {
+        guard SessionManager.shared.loginUser(login: loginPhoneTF.text ?? "", password: passwordTF.text ?? "") else {
             showAlert(
                 withTitle: "Неверный логин или пароль!",
                 andMessage: "Пожалуйста, введите корректные данные."
             )
             return false
         }
+        return true
     }
     
 //    @IBAction func forgotPasswordAction() {
