@@ -41,7 +41,7 @@
         <!--MenuVC-->
         <scene sceneID="CSu-rS-I6P">
             <objects>
-                <viewControllerPlaceholder storyboardName="MenuSB" referencedIdentifier="MenuVC" id="8VO-oO-oqf" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MenuVC" storyboardName="MenuSB" referencedIdentifier="MenuVC" id="8VO-oO-oqf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ACH-EU-77h"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vPS-Qh-0b9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
