@@ -14,7 +14,7 @@ final class MenuTableViewController: UITableViewController {
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        menu.products = CurrentMenu.shared.products
+        menu.products = DataStore.shared.menu
 
     }
 
