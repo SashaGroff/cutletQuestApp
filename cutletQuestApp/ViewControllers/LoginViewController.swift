@@ -9,20 +9,11 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
-    // MARK: - IB Outlets
     @IBOutlet var loginPhoneTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var welcomeLogoView: UIImageView!
     
-    // MARK: - Public Properties
-
-    // MARK: - Private Properties
-    
-
-    // MARK: - Initializers
-    
-    // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,35 +23,24 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if identifier == "loginButton" {
-//            guard loginPhoneTF.text == User().login, passwordTF.text == User().userPassword else {
-//                showAlert(
-//                    withTitle: "Неверный логин или пароль!",
-//                    andMessage: "Пожалуйста, введите корректные данные."
-//                )
-//                return false
-//            }
-//        }
-//        return true
-//    }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if SessionManager.shared.loginUser(login: loginPhoneTF.text ?? "", password: passwordTF.text ?? "") {
+            return true
+        } else {
+            showAlert(
+                withTitle: "Неверный логин или пароль!",
+                andMessage: "Пожалуйста, введите корректные данные."
+            )
+            return false
+        }
+    }
     
-    // MARK: - IB Actions
 //    @IBAction func forgotPasswordAction() {
 //        showAlert(
 //            withTitle: "Oops!",
 //            andMessage: "Твой логин: \(User().login), пароль: \(User().userPassword) 😉"
 //        )
 //    }
-    
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        loginPhoneTF.text = ""
-        passwordTF.text = ""
-    }
-    
-    // MARK: - Public Methods
-
-    // MARK: - Private Methods
     
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(
