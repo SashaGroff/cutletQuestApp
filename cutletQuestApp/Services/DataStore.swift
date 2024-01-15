@@ -111,7 +111,8 @@ final class DataStore {
     
     var users = [
         User(login: "+79826543211", password: "123", name: "Alex"),
-        User(login: "+79050019855", password: "123", name: "Rustam")
+        User(login: "+79050019855", password: "123", name: "Rustam"),
+        User(login: "1", password: "1", name: "1")
     ]
     
     

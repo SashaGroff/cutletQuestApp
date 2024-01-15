@@ -11,7 +11,7 @@ class User {
     let login: String
     let password: String
     let name: String
-    let basket: Cart
+    var basket: Cart
     
     init(login: String, password: String, name: String) {
         self.login = login
@@ -21,28 +21,40 @@ class User {
     }
 }
 
-struct Cart {
+class Cart {
     private var products: [Product : Int] = [:]
     
     func getBasket() -> [Product : Int] {
         products
     }
     
-    mutating func addToBasket(product: Product) {
+    func getBasketSum() -> Int {
+        products.reduce(0, { partialResult, cartProduct in
+            partialResult + cartProduct.value * cartProduct.key.price
+        })
+    }
+    
+     func addToBasket(product: Product) {
         products[product, default: 0] += 1
     }
     
-    mutating func clearAllBasket() {
+     func clearAllBasket() {
         products.removeAll()
     }
     
-    mutating func removeFromBasket(product: Product) {
-        if products.contains(where: {$0.key == product}) {
+     func removeFromBasket(product: Product) {
+      /*  if products.contains(where: {$0.key == product}) {
             products[product]! -= 1
         }
-        
+     */
         if products[product] == 0 {
             products.removeValue(forKey: product)
+        }
+    }
+    
+     func updateBasket(forProduct product: Product,setQuantity quantity: Int) {
+        if products.contains(where: {$0.key == product}) {
+            products[product]! = quantity
         }
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 final class WelcomeViewController: UIViewController {
-
+    
     // MARK: - IB Outlets
     @IBOutlet var loginPhoneTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -16,12 +16,12 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLogoView: UIImageView!
     
     // MARK: - Public Properties
-
+    
     // MARK: - Private Properties
     private let welcomeImage = UIImage(named: "WelcomeImage")
     //private let newSize = CGSize(width: 1200, height: 1100)
     private let scale = 2.0
-
+    
     // MARK: - Initializers
     
     // MARK: - Overrides Methods
@@ -29,6 +29,27 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeLogoView.image = welcomeImage
         welcomeLogoView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        
+        CurrentUser.shared.user = SessionManager.shared.loginUser(
+            login: "1",
+            password: "1"
+        )
+        
+        CurrentMenu.shared.products = SessionManager.shared.getMenu()
+        
+        CurrentUser.shared.user?.basket.addToBasket(
+            product: CurrentMenu.shared.products.first!
+        )
+        CurrentUser.shared.user?.basket.addToBasket(
+            product: CurrentMenu.shared.products[2]
+        )
+        CurrentUser.shared.user?.basket.addToBasket(
+            product: CurrentMenu.shared.products[4]
+        )
+        CurrentUser.shared.user?.basket.addToBasket(
+            product: CurrentMenu.shared.products[6]
+        )
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -36,26 +57,26 @@ final class WelcomeViewController: UIViewController {
         view.endEditing(true)
     }
     
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        if identifier == "loginButton" {
-//            guard loginPhoneTF.text == User().login, passwordTF.text == User().userPassword else {
-//                showAlert(
-//                    withTitle: "Неверный логин или пароль!",
-//                    andMessage: "Пожалуйста, введите корректные данные."
-//                )
-//                return false
-//            }
-//        }
-//        return true
-//    }
+    //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    //        if identifier == "loginButton" {
+    //            guard loginPhoneTF.text == User().login, passwordTF.text == User().userPassword else {
+    //                showAlert(
+    //                    withTitle: "Неверный логин или пароль!",
+    //                    andMessage: "Пожалуйста, введите корректные данные."
+    //                )
+    //                return false
+    //            }
+    //        }
+    //        return true
+    //    }
     
     // MARK: - IB Actions
-//    @IBAction func forgotPasswordAction() {
-//        showAlert(
-//            withTitle: "Oops!",
-//            andMessage: "Твой логин: \(User().login), пароль: \(User().userPassword) 😉"
-//        )
-//    }
+    //    @IBAction func forgotPasswordAction() {
+    //        showAlert(
+    //            withTitle: "Oops!",
+    //            andMessage: "Твой логин: \(User().login), пароль: \(User().userPassword) 😉"
+    //        )
+    //    }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         loginPhoneTF.text = ""
@@ -63,7 +84,7 @@ final class WelcomeViewController: UIViewController {
     }
     
     // MARK: - Public Methods
-
+    
     // MARK: - Private Methods
     
     private func showAlert(withTitle title: String, andMessage message: String) {
