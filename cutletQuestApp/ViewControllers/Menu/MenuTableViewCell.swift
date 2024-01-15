@@ -23,10 +23,10 @@ final class MenuTableViewCell: UITableViewCell {
     }
     
     // MARK: - Public Methods
-    func configureCell(burger: Product) {
-        productImage.image = UIImage(named: burger.pictureURL)
-        productName.text = burger.name
-        productDescription.text = burger.description
-        productPrice.setTitle(burger.price.formatted(), for: .normal)
+    func configureCell(product: Product) {
+        productImage.image = UIImage(named: product.pictureURL)
+        productName.text = product.name
+        productDescription.text = product.description
+        productPrice.setTitle(product.price.formatted(), for: .normal)
     }
 }

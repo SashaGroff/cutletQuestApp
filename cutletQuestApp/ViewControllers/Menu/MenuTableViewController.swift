@@ -9,12 +9,12 @@ import UIKit
 
 final class MenuTableViewController: UITableViewController {
     // MARK: - Public Properties
-    private var burger = Burger()
+    private var menu = Menu()
     
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        burger.getBurger()
+        menu.products = DataStore.shared.menu
 
     }
 
@@ -23,7 +23,7 @@ final class MenuTableViewController: UITableViewController {
         
         if indexPath.section == 0 {
             let productCell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! MenuTableViewCell
-            productCell.configureCell(burger: burger.burgers[indexPath.row])
+            productCell.configureCell(product: menu.products[indexPath.row])
             return productCell
         } else {
             let quizCell = tableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath) as! QuizTableViewCell
@@ -37,7 +37,7 @@ final class MenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return section == 0 ? burger.burgers.count : 1
+        return section == 0 ? menu.products.count : 1
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

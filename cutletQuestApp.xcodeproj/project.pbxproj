@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B1485312B45AFAC00347171 /* AboutUsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */; };
 		6B1485332B45B00F00347171 /* CartSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485322B45B00F00347171 /* CartSB.storyboard */; };
+		6B2268752B5450C8003A1F2A /* QuizSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2268742B5450C8003A1F2A /* QuizSB.storyboard */; };
 		6B5800E32B493E6000C59391 /* MenuSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5800E22B493E6000C59391 /* MenuSB.storyboard */; };
 		6B5800E52B49417800C59391 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5800E42B49417800C59391 /* MenuTableViewController.swift */; };
 		6B5800E72B4947D900C59391 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5800E62B4947D900C59391 /* MenuTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUsSB.storyboard; sourceTree = "<group>"; };
 		6B1485322B45B00F00347171 /* CartSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartSB.storyboard; sourceTree = "<group>"; };
+		6B2268742B5450C8003A1F2A /* QuizSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizSB.storyboard; sourceTree = "<group>"; };
 		6B5800E22B493E6000C59391 /* MenuSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuSB.storyboard; sourceTree = "<group>"; };
 		6B5800E42B49417800C59391 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		6B5800E62B4947D900C59391 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				6B1485322B45B00F00347171 /* CartSB.storyboard */,
 				6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */,
 				6B7E94B62B39F46F00170816 /* LaunchScreen.storyboard */,
+				6B2268742B5450C8003A1F2A /* QuizSB.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				6B7E94B52B39F46F00170816 /* Assets.xcassets in Resources */,
 				6B1485312B45AFAC00347171 /* AboutUsSB.storyboard in Resources */,
 				6B1485332B45B00F00347171 /* CartSB.storyboard in Resources */,
+				6B2268752B5450C8003A1F2A /* QuizSB.storyboard in Resources */,
 				6B7E94B32B39F46B00170816 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
