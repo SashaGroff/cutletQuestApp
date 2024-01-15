@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+final class User {
     let login: String
     let password: String
     let name: String
@@ -21,22 +21,22 @@ class User {
     }
 }
 
-struct Cart {
+final class Cart {
     private var products: [Product : Int] = [:]
     
     func getBasket() -> [Product : Int] {
         products
     }
     
-    mutating func addToBasket(product: Product) {
+    func addToBasket(product: Product) {
         products[product, default: 0] += 1
     }
     
-    mutating func clearAllBasket() {
+    func clearAllBasket() {
         products.removeAll()
     }
     
-    mutating func removeFromBasket(product: Product) {
+    func removeFromBasket(product: Product) {
         if products.contains(where: {$0.key == product}) {
             products[product]! -= 1
         }
