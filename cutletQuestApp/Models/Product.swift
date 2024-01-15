@@ -25,3 +25,12 @@ final class CurrentMenu {
     
     private init() {}
 }
+
+struct Burger {
+    var burgers: [Product] = []
+    
+    var getBurger: [Product] {
+        burgers
+    }
+}
+
