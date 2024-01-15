@@ -14,7 +14,7 @@ final class MenuTableViewController: UITableViewController {
     // MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        burger.getBurger()
+        //burger.getBurger()
 
     }
 
