@@ -119,6 +119,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="s5i-Ct-tB1" kind="presentation" modalPresentationStyle="automatic" id="lVd-dO-oJX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
@@ -150,7 +153,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954.96183206106866" y="-23.239436619718312"/>
+            <point key="canvasLocation" x="954.375" y="-23.239436619718312"/>
+        </scene>
+        <!--Корзина-->
+        <scene sceneID="dph-Vh-o9t">
+            <objects>
+                <viewController id="s5i-Ct-tB1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Og-Yv-XjD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3GY-8v-fPr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Корзина" id="4Ik-kX-ffU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbr-Sb-Cgz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1811" y="-23"/>
         </scene>
         <!--Cart-->
         <scene sceneID="0Ya-bA-KAd">

@@ -3,7 +3,6 @@ xcuserdata
 xcuserdata/*
 *.xcuserstate
 
-.DS_Store
 *.swp
 *~.nib
 
