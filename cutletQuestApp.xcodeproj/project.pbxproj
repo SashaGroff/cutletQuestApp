@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4299355C2B58A93900EC6409 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355B2B58A93900EC6409 /* AboutUsViewController.swift */; };
+		4299355C2B58A93900EC6409 /* AskingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355B2B58A93900EC6409 /* AskingViewController.swift */; };
 		4299355E2B58AA1100EC6409 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */; };
 		429935602B59499000EC6409 /* AboutUsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */; };
 		6B14852D2B45ACC400347171 /* WelcomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */; };
@@ -50,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4299355B2B58A93900EC6409 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		4299355B2B58A93900EC6409 /* AskingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskingViewController.swift; sourceTree = "<group>"; };
 		4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsInfoViewController.swift; sourceTree = "<group>"; };
 		6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeSB.storyboard; sourceTree = "<group>"; };
@@ -107,9 +107,9 @@
 		423429F82B5849A800253155 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				4299355B2B58A93900EC6409 /* AboutUsViewController.swift */,
 				4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */,
 				4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */,
+				4299355B2B58A93900EC6409 /* AskingViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4BCBE482B45E60E002D2327 /* RegistrationViewController.swift in Sources */,
-				4299355C2B58A93900EC6409 /* AboutUsViewController.swift in Sources */,
+				4299355C2B58A93900EC6409 /* AskingViewController.swift in Sources */,
 				6B7E94B02B39F46B00170816 /* ViewController.swift in Sources */,
 				6B88B3CC2B4DFE8A000DAB92 /* QuizTableViewCell.swift in Sources */,
 				C448857E2B45BB9F001B52A1 /* WelcomeViewController.swift in Sources */,
