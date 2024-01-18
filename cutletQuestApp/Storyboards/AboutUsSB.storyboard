@@ -140,7 +140,7 @@
                                         </tableViewCellContentView>
                                         <listContentConfiguration key="contentConfiguration" text="    О нас" image="person.3" catalog="system"/>
                                         <connections>
-                                            <segue destination="s1P-ia-ifQ" kind="show" trigger="accessoryAction" id="W4e-xV-QxP"/>
+                                            <segue destination="s1P-ia-ifQ" kind="show" id="MNx-ok-MOe"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="aboutAppCell" id="7CQ-Rf-wqA">
@@ -152,7 +152,7 @@
                                         </tableViewCellContentView>
                                         <listContentConfiguration key="contentConfiguration" text="    О приложении" secondaryText="" image="macbook.and.iphone" catalog="system"/>
                                         <connections>
-                                            <segue destination="wN5-Qp-UbZ" kind="show" trigger="accessoryAction" id="Cjt-DN-azX"/>
+                                            <segue destination="wN5-Qp-UbZ" kind="show" id="5TD-Rs-PoQ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mistakeCell" id="Xp3-6u-c6X">
@@ -164,7 +164,7 @@
                                         </tableViewCellContentView>
                                         <listContentConfiguration key="contentConfiguration" text="    Сообщить об ошибке" secondaryText="" image="envelope" catalog="system"/>
                                         <connections>
-                                            <segue destination="nHK-4r-Euc" kind="presentation" trigger="accessoryAction" id="tYG-pZ-kRI"/>
+                                            <segue destination="nHK-4r-Euc" kind="presentation" id="sGr-hy-Shh"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
