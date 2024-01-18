@@ -75,7 +75,7 @@
         <!--Профиль-->
         <scene sceneID="Wut-bA-doH">
             <objects>
-                <tableViewController id="kmD-2D-jId" sceneMemberID="viewController">
+                <tableViewController id="kmD-2D-jId" customClass="SettingsTableViewController" customModule="cutletQuestApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="OTr-gE-KDq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,20 +96,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLz-Kb-GNI">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLz-Kb-GNI">
                                                     <rect key="frame" x="9" y="4" width="330" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🖊️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB4-dl-AXW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖊️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB4-dl-AXW">
                                                     <rect key="frame" x="343" y="4" width="37" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FB4-dl-AXW" firstAttribute="leading" secondItem="hLz-Kb-GNI" secondAttribute="trailing" constant="4" id="2aR-WE-5iQ"/>
+                                                <constraint firstItem="hLz-Kb-GNI" firstAttribute="leading" secondItem="rVj-8e-VXj" secondAttribute="leading" constant="9" id="EsC-el-Xjd"/>
+                                                <constraint firstItem="hLz-Kb-GNI" firstAttribute="leading" secondItem="rVj-8e-VXj" secondAttribute="leading" constant="9" id="IxI-Rf-CPb"/>
+                                                <constraint firstItem="hLz-Kb-GNI" firstAttribute="top" secondItem="rVj-8e-VXj" secondAttribute="top" constant="4" id="OwD-zn-haS"/>
+                                                <constraint firstAttribute="bottom" secondItem="FB4-dl-AXW" secondAttribute="bottom" constant="5.6699999999999999" id="Q3Y-FK-YBh"/>
+                                                <constraint firstAttribute="trailing" secondItem="FB4-dl-AXW" secondAttribute="trailing" constant="13" id="Vqg-Mh-mEc"/>
+                                                <constraint firstItem="hLz-Kb-GNI" firstAttribute="top" secondItem="rVj-8e-VXj" secondAttribute="top" constant="4" id="bIY-9X-lbp"/>
+                                                <constraint firstItem="FB4-dl-AXW" firstAttribute="leading" secondItem="hLz-Kb-GNI" secondAttribute="trailing" constant="4" id="dK4-rO-gPh"/>
+                                                <constraint firstAttribute="bottom" secondItem="hLz-Kb-GNI" secondAttribute="bottom" constant="5.6699999999999999" id="fF9-UZ-Ev0"/>
+                                                <constraint firstItem="FB4-dl-AXW" firstAttribute="leading" secondItem="hLz-Kb-GNI" secondAttribute="trailing" constant="4" id="jXd-jC-rjE"/>
+                                                <constraint firstItem="FB4-dl-AXW" firstAttribute="top" secondItem="rVj-8e-VXj" secondAttribute="top" constant="4" id="sZW-lY-xv1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="surnameCell" id="rNC-tb-Tz8">
@@ -119,7 +130,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwK-dR-agd">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwK-dR-agd">
                                                     <rect key="frame" x="9" y="5" width="331" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -203,7 +214,7 @@
                                         </tableViewCellContentView>
                                         <listContentConfiguration key="contentConfiguration" text="    О нас" image="person.3" catalog="system"/>
                                         <connections>
-                                            <segue destination="BFR-wW-Omr" kind="show" trigger="accessoryAction" id="8dN-1U-hXl"/>
+                                            <segue destination="s1P-ia-ifQ" kind="show" trigger="accessoryAction" id="W4e-xV-QxP"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="aboutAppCell" id="7CQ-Rf-wqA">
@@ -233,28 +244,43 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Профиль" image="gearshape.2.fill" catalog="system" id="mnI-N0-uGc"/>
-                    <navigationItem key="navigationItem" title="Профиль" id="HXn-43-3M8"/>
+                    <navigationItem key="navigationItem" title="Профиль" id="HXn-43-3M8">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="nuw-tv-Dxn"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPH-D3-fOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3861.8320610687019" y="147.88732394366198"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="7Up-wm-pKF">
+        <!--О нас-->
+        <scene sceneID="Dqn-X5-cDZ">
             <objects>
-                <viewController id="BFR-wW-Omr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4gT-mN-VTR">
+                <tableViewController id="s1P-ia-ifQ" customClass="AboutUsInfoViewController" customModule="cutletQuestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Lm1-aO-LFg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="XCa-Mw-4Eq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Daf-r7-cD4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mF2-V7-Lo1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="usInfo" id="67u-0G-SAi">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="67u-0G-SAi" id="bpe-RS-8bN">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="s1P-ia-ifQ" id="fa2-dy-Jlp"/>
+                            <outlet property="delegate" destination="s1P-ia-ifQ" id="qmV-ha-KO6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="О нас" id="MEb-ZG-tQc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2k-cX-C2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4671" y="148"/>
+            <point key="canvasLocation" x="4708" y="148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nrC-YK-SUt">
