@@ -27,6 +27,6 @@ final class AboutUsInfoViewController: UITableViewController {
 
 extension AboutUsInfoViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        6
     }
 }
