@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		423930D42B5827B40020D8E7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423930D32B5827B40020D8E7 /* Settings.storyboard */; };
 		4299355C2B58A93900EC6409 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355B2B58A93900EC6409 /* AboutUsViewController.swift */; };
 		4299355E2B58AA1100EC6409 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */; };
 		429935602B59499000EC6409 /* AboutUsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */; };
@@ -51,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		423930D32B5827B40020D8E7 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		4299355B2B58A93900EC6409 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsInfoViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */,
 				6B7E94B62B39F46F00170816 /* LaunchScreen.storyboard */,
 				6B2268742B5450C8003A1F2A /* QuizSB.storyboard */,
-				423930D32B5827B40020D8E7 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -324,7 +321,6 @@
 				6B1485332B45B00F00347171 /* CartSB.storyboard in Resources */,
 				6B2268752B5450C8003A1F2A /* QuizSB.storyboard in Resources */,
 				6B7E94B32B39F46B00170816 /* Main.storyboard in Resources */,
-				423930D42B5827B40020D8E7 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
