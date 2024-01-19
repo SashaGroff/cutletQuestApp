@@ -18,6 +18,7 @@ final class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
+        updateResult()
     }
     
     
@@ -45,7 +46,7 @@ extension ResultViewController {
     }
     
     private func updateUI(with burger: Burger) {
-        burgerTypeLabel.text = "Hi - \(burger.rawValue)!"
+        burgerTypeLabel.text = "Наша рекомендация – \(burger.rawValue)!"
         descriptionLabel.text = burger.definition
     }
     

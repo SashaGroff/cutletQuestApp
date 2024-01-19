@@ -78,7 +78,7 @@
                                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2zb-Du-ftJ">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zb-Du-ftJ">
                                                 <rect key="frame" x="239" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" systemColor="systemOrangeColor"/>
                                             </switch>
@@ -93,7 +93,7 @@
                                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bzc-yI-CLS">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bzc-yI-CLS">
                                                 <rect key="frame" x="239" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" systemColor="systemOrangeColor"/>
                                             </switch>
@@ -108,7 +108,7 @@
                                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7r-qr-Ahi">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E7r-qr-Ahi">
                                                 <rect key="frame" x="239" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" systemColor="systemOrangeColor"/>
                                             </switch>
@@ -123,7 +123,7 @@
                                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-Ib-ktH">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-Ib-ktH">
                                                 <rect key="frame" x="239" y="0.0" width="51" height="31"/>
                                                 <color key="onTintColor" systemColor="systemOrangeColor"/>
                                             </switch>
@@ -248,17 +248,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dQS-Wj-Dhm">
-                                <rect key="frame" x="8" y="249.5" width="304.5" height="69.5"/>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dQS-Wj-Dhm">
+                                <rect key="frame" x="20" y="236.5" width="280" height="95"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы –  🐙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbq-o7-Ilq">
-                                        <rect key="frame" x="91" y="0.0" width="122" height="41"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы –  🐙" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbq-o7-Ilq">
+                                        <rect key="frame" x="82.5" y="0.0" width="115" height="42.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы не можем помочь вам с выбором!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVz-Ea-Yu3">
-                                        <rect key="frame" x="0.0" y="49" width="304.5" height="20.5"/>
+                                        <rect key="frame" x="33.5" y="52.5" width="213.5" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -269,8 +269,10 @@
                         <viewLayoutGuide key="safeArea" id="jFN-CE-rjQ"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dQS-Wj-Dhm" firstAttribute="leading" secondItem="jFN-CE-rjQ" secondAttribute="leading" constant="20" id="0ch-Xz-yAW"/>
                             <constraint firstItem="dQS-Wj-Dhm" firstAttribute="centerY" secondItem="Bi2-Lw-KHi" secondAttribute="centerY" id="iOd-Eo-Ynd"/>
                             <constraint firstItem="dQS-Wj-Dhm" firstAttribute="centerX" secondItem="Bi2-Lw-KHi" secondAttribute="centerX" id="pck-ls-1Na"/>
+                            <constraint firstItem="jFN-CE-rjQ" firstAttribute="trailing" secondItem="dQS-Wj-Dhm" secondAttribute="trailing" constant="20" id="rqr-9M-flG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XHS-XU-qJm">
