@@ -259,19 +259,60 @@
         <!--О приложении-->
         <scene sceneID="JKi-ag-oGh">
             <objects>
-                <tableViewController id="wN5-Qp-UbZ" sceneMemberID="viewController">
+                <tableViewController id="wN5-Qp-UbZ" customClass="AboutAppTableViewController" customModule="cutletQuestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="DH7-Y9-YGh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" id="TPV-50-TFV">
+                            <rect key="frame" x="0.0" y="165.33333587646484" width="393" height="272"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                        </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoDetails" id="xWD-d4-1zh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoDetails" textLabel="IHj-ON-rY4" detailTextLabel="UkN-FC-Cyd" style="IBUITableViewCellStyleValue1" id="xWD-d4-1zh">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xWD-d4-1zh" id="ZyU-Gl-RPL">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IHj-ON-rY4">
+                                            <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UkN-FC-Cyd">
+                                            <rect key="frame" x="340.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="fullInfoDetails" textLabel="cmg-Zu-GyD" style="IBUITableViewCellStyleDefault" id="XYP-fZ-CiB">
+                                <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XYP-fZ-CiB" id="8HP-b4-C2F">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmg-Zu-GyD">
+                                            <rect key="frame" x="20" y="0.0" width="334.66666666666669" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="0iD-LU-nID" kind="presentation" id="EbE-TV-46Q"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -283,7 +324,47 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eu-rH-pAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4695" y="677"/>
+            <point key="canvasLocation" x="4693.8931297709923" y="676.76056338028172"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E9e-eP-b6K">
+            <objects>
+                <viewController id="0iD-LU-nID" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X8a-CG-HxH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeM-nH-MAu">
+                                <rect key="frame" x="20" y="245.33333333333337" width="353" height="182.66666666666663"/>
+                                <string key="text">Мы – доставка ваших любимых бургеров прямиком из ресторана «Cutlet Quest» в любую точку Москвы. Свежайшее мясо и овощи, вкусные горячие булочки и вкуснейшие напитки превратят ваш домашний ужин или обед в офисе в восхитительный опыт, который будет радовать не только ваш желудок, но и поднимать настроение на весь день.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О нас" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wob-Zu-dtO">
+                                <rect key="frame" x="20" y="150" width="353" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemOrangeColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9my-hg-R2Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wob-Zu-dtO" firstAttribute="top" secondItem="9my-hg-R2Q" secondAttribute="top" constant="150" id="4mq-BU-MCd"/>
+                            <constraint firstItem="9my-hg-R2Q" firstAttribute="trailing" secondItem="BeM-nH-MAu" secondAttribute="trailing" constant="20" id="N2b-rn-ZSo"/>
+                            <constraint firstItem="BeM-nH-MAu" firstAttribute="top" secondItem="Wob-Zu-dtO" secondAttribute="bottom" constant="57.329999999999998" id="Yta-zc-KHl"/>
+                            <constraint firstItem="BeM-nH-MAu" firstAttribute="leading" secondItem="9my-hg-R2Q" secondAttribute="leading" constant="20" id="a8o-sh-dAy"/>
+                            <constraint firstItem="9my-hg-R2Q" firstAttribute="trailing" secondItem="Wob-Zu-dtO" secondAttribute="trailing" constant="20" id="mux-YT-Ev1"/>
+                            <constraint firstItem="Wob-Zu-dtO" firstAttribute="leading" secondItem="9my-hg-R2Q" secondAttribute="leading" constant="20" id="x13-aX-c6z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pk8-UA-Wnw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5571.7557251908393" y="642.25352112676057"/>
         </scene>
         <!--О нас-->
         <scene sceneID="Dqn-X5-cDZ">
@@ -348,6 +429,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="1024" height="1024"/>
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="gearshape.2.fill" catalog="system" width="128" height="101"/>
         <image name="macbook.and.iphone" catalog="system" width="128" height="78"/>
@@ -366,6 +448,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
