@@ -9,6 +9,7 @@ import UIKit
 
 final class AppInfoFullViewController: UIViewController {
 
+    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var infoLabel: UILabel!
     
@@ -19,8 +20,7 @@ final class AppInfoFullViewController: UIViewController {
     @IBAction func tappedButton() {
         dismiss(animated: true)
     }
+
     
-
-
 
 }

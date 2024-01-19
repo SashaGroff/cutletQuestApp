@@ -42,7 +42,7 @@ extension AboutUsInfoViewController {
         content.textProperties.font = .boldSystemFont(ofSize: 15)
         content.textProperties.color = .gray
         content.secondaryText = "https://github.com/NatashaOvdina"
-        content.image = UIImage(named: "testPhoto")
+        content.image = UIImage(named: "Natasha")
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         
         cell.contentConfiguration = content
