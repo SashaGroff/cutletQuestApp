@@ -15,7 +15,7 @@ final class AboutAppTableViewController: UITableViewController {
         
     }
     
-    // MARK: - Table view data source
+    // MARK: - UITableViewDataSource
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -57,6 +57,16 @@ final class AboutAppTableViewController: UITableViewController {
         }
     }
 }
+
+// MARK: - UITableViewDelegate
+
+extension AboutAppTableViewController {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
 
 
 

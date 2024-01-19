@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -199,7 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="of9-wF-gqh">
-                                <rect key="frame" x="16" y="120" width="361" height="73.666666666666686"/>
+                                <rect key="frame" x="16" y="140" width="361" height="73.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сообщить о проблеме" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGw-zs-VvV">
                                         <rect key="frame" x="67.666666666666671" y="0.0" width="225.66666666666663" height="25.333333333333332"/>
@@ -216,14 +217,14 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-Hi-N5z">
-                                <rect key="frame" x="16" y="216" width="361" height="226"/>
+                                <rect key="frame" x="16" y="236" width="361" height="206"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" returnKeyType="done" smartDashesType="yes" smartInsertDeleteType="yes"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTj-o2-IdX">
-                                <rect key="frame" x="85" y="465" width="223" height="34.333333333333314"/>
+                                <rect key="frame" x="85" y="477" width="223" height="34.333333333333314"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Отправить"/>
@@ -231,19 +232,29 @@
                                     <action selector="tappedButton" destination="nHK-4r-Euc" eventType="touchUpInside" id="LwZ-bC-t4e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weU-Iq-iRO">
+                                <rect key="frame" x="16" y="45" width="93.333333333333329" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Назад"/>
+                                <connections>
+                                    <action selector="tappedButtonBack" destination="nHK-4r-Euc" eventType="touchUpInside" id="RqD-zo-zl1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jEc-ty-uQD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jEc-ty-uQD" firstAttribute="trailing" secondItem="pTj-o2-IdX" secondAttribute="trailing" constant="85" id="4eG-UO-Xpp"/>
-                            <constraint firstItem="pTj-o2-IdX" firstAttribute="top" secondItem="TvU-Hi-N5z" secondAttribute="bottom" constant="23" id="EPs-bv-8wK"/>
+                            <constraint firstItem="weU-Iq-iRO" firstAttribute="leading" secondItem="jEc-ty-uQD" secondAttribute="leading" constant="16" id="DQW-bZ-f4d"/>
+                            <constraint firstItem="pTj-o2-IdX" firstAttribute="top" secondItem="TvU-Hi-N5z" secondAttribute="bottom" constant="35" id="EPs-bv-8wK"/>
                             <constraint firstItem="jEc-ty-uQD" firstAttribute="trailing" secondItem="TvU-Hi-N5z" secondAttribute="trailing" constant="16" id="GWK-3D-L5o"/>
                             <constraint firstItem="of9-wF-gqh" firstAttribute="leading" secondItem="jEc-ty-uQD" secondAttribute="leading" constant="16" id="Hnj-tq-cah"/>
                             <constraint firstItem="TvU-Hi-N5z" firstAttribute="leading" secondItem="jEc-ty-uQD" secondAttribute="leading" constant="16" id="Qib-ik-dMy"/>
-                            <constraint firstItem="of9-wF-gqh" firstAttribute="top" secondItem="jEc-ty-uQD" secondAttribute="top" constant="120" id="SeV-tI-gbZ"/>
+                            <constraint firstItem="of9-wF-gqh" firstAttribute="top" secondItem="jEc-ty-uQD" secondAttribute="top" constant="140" id="SeV-tI-gbZ"/>
                             <constraint firstItem="TvU-Hi-N5z" firstAttribute="top" secondItem="of9-wF-gqh" secondAttribute="bottom" constant="22.329999999999998" id="a3j-WA-qAp"/>
                             <constraint firstItem="pTj-o2-IdX" firstAttribute="leading" secondItem="jEc-ty-uQD" secondAttribute="leading" constant="85" id="lm8-3g-u8H"/>
                             <constraint firstItem="jEc-ty-uQD" firstAttribute="bottom" secondItem="TvU-Hi-N5z" secondAttribute="bottom" constant="400" id="tap-u9-Jij"/>
+                            <constraint firstItem="weU-Iq-iRO" firstAttribute="top" secondItem="jEc-ty-uQD" secondAttribute="top" constant="45" id="xJY-oL-kwg"/>
                             <constraint firstItem="jEc-ty-uQD" firstAttribute="trailing" secondItem="of9-wF-gqh" secondAttribute="trailing" constant="16" id="yia-Cb-1oh"/>
                         </constraints>
                     </view>
@@ -326,10 +337,10 @@
             </objects>
             <point key="canvasLocation" x="4693.8931297709923" y="676.76056338028172"/>
         </scene>
-        <!--View Controller-->
+        <!--App Info Full View Controller-->
         <scene sceneID="E9e-eP-b6K">
             <objects>
-                <viewController id="0iD-LU-nID" sceneMemberID="viewController">
+                <viewController id="0iD-LU-nID" customClass="AppInfoFullViewController" customModule="cutletQuestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X8a-CG-HxH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,18 +360,33 @@
                                 <color key="shadowColor" systemColor="systemOrangeColor"/>
                                 <size key="shadowOffset" width="2" height="-1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xO-cg-JFS">
+                                <rect key="frame" x="16" y="52" width="94" height="35"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" Назад"/>
+                                <connections>
+                                    <action selector="tappedButton" destination="0iD-LU-nID" eventType="touchUpInside" id="TEG-rY-5ZG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9my-hg-R2Q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1xO-cg-JFS" firstAttribute="top" secondItem="9my-hg-R2Q" secondAttribute="top" constant="52" id="1T9-Nt-fWm"/>
                             <constraint firstItem="Wob-Zu-dtO" firstAttribute="top" secondItem="9my-hg-R2Q" secondAttribute="top" constant="150" id="4mq-BU-MCd"/>
                             <constraint firstItem="9my-hg-R2Q" firstAttribute="trailing" secondItem="BeM-nH-MAu" secondAttribute="trailing" constant="20" id="N2b-rn-ZSo"/>
                             <constraint firstItem="BeM-nH-MAu" firstAttribute="top" secondItem="Wob-Zu-dtO" secondAttribute="bottom" constant="57.329999999999998" id="Yta-zc-KHl"/>
                             <constraint firstItem="BeM-nH-MAu" firstAttribute="leading" secondItem="9my-hg-R2Q" secondAttribute="leading" constant="20" id="a8o-sh-dAy"/>
                             <constraint firstItem="9my-hg-R2Q" firstAttribute="trailing" secondItem="Wob-Zu-dtO" secondAttribute="trailing" constant="20" id="mux-YT-Ev1"/>
                             <constraint firstItem="Wob-Zu-dtO" firstAttribute="leading" secondItem="9my-hg-R2Q" secondAttribute="leading" constant="20" id="x13-aX-c6z"/>
+                            <constraint firstItem="1xO-cg-JFS" firstAttribute="leading" secondItem="9my-hg-R2Q" secondAttribute="leading" constant="16" id="zRp-VW-JpW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="BeM-nH-MAu" id="tYp-oP-lNb"/>
+                        <outlet property="titleLabel" destination="Wob-Zu-dtO" id="7X4-td-He4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pk8-UA-Wnw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -430,10 +456,14 @@
     </scenes>
     <resources>
         <image name="Logo" width="1024" height="1024"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="envelope" catalog="system" width="128" height="85"/>
         <image name="gearshape.2.fill" catalog="system" width="128" height="101"/>
         <image name="macbook.and.iphone" catalog="system" width="128" height="78"/>
         <image name="person.3" catalog="system" width="128" height="66"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

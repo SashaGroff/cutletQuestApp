@@ -31,6 +31,10 @@ final class AskingViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    @IBAction func tappedButtonBack() {
+        dismiss(animated: true)
+    }
+    
     // MARK: - Override Keyboard Method
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
