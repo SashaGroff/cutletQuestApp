@@ -23,16 +23,20 @@ final class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard let user = SessionManager.shared.loginUser(login: loginPhoneTF.text!, password: passwordTF.text!) else {
-            showAlert(
-                withTitle: "Ошибка",
-                andMessage: "Неправильно указан логин или пароль. Пожалуйста, введите корректные данные."
-            )
-            return false
-        }
-        CurrentUser.shared.user = user
-        return true
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        guard let user = SessionManager.shared.loginUser(login: loginPhoneTF.text!, password: passwordTF.text!) else {
+//            showAlert(
+//                withTitle: "Ошибка",
+//                andMessage: "Неправильно указан логин или пароль. Пожалуйста, введите корректные данные."
+//            )
+//            return false
+//        }
+//        CurrentUser.shared.user = user
+//        return true
+//    }
+    
+    @IBAction func loginButtonTapped() {
+        performUserLogin()
     }
     
     @IBAction func forgotPassword() {
@@ -54,6 +58,21 @@ final class LoginViewController: UIViewController {
             withTitle: "Регистрация",
             andMessage: "Введите ваши данные"
         )
+    }
+    
+    private func performUserLogin() {
+        guard let login = loginPhoneTF.text, !login.isEmpty,
+              let password = passwordTF.text, !password.isEmpty else {
+            showAlert(withTitle: "Ошибка", andMessage: "Заполните все поля")
+            return
+        }
+        
+        if let user = SessionManager.shared.loginUser(login: login, password: password) {
+            CurrentUser.shared.user = user
+            performSegue(withIdentifier: "loginButton", sender: nil)
+        } else {
+            showAlert(withTitle: "Ошибка", andMessage: "Неверное имя или пароль!")
+        }
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {

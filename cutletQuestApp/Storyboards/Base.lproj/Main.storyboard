@@ -96,7 +96,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                         <connections>
-                                            <segue destination="1Uo-x5-Law" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="YI0-gW-G7B"/>
+                                            <action selector="loginButtonTapped" destination="X2J-6t-mHg" eventType="touchUpInside" id="Mqi-af-1cc"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="nOU-r4-KFw">
@@ -156,6 +156,7 @@
                         <outlet property="loginPhoneTF" destination="yKv-EC-a7N" id="o4d-JS-Oex"/>
                         <outlet property="passwordTF" destination="GcJ-OX-01U" id="F60-uL-SJ1"/>
                         <outlet property="welcomeLogoView" destination="Ycw-C3-pDb" id="TmJ-0p-YWD"/>
+                        <segue destination="1Uo-x5-Law" kind="presentation" identifier="loginButton" modalPresentationStyle="fullScreen" id="Wfs-Ha-eC7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lf-Z0-aYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
