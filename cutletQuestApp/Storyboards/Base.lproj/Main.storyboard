@@ -96,7 +96,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Войти"/>
                                         <connections>
-                                            <segue destination="1Uo-x5-Law" kind="presentation" modalPresentationStyle="fullScreen" id="YI0-gW-G7B"/>
+                                            <segue destination="1Uo-x5-Law" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="YI0-gW-G7B"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="nOU-r4-KFw">
@@ -110,6 +110,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Забыли пароль?"/>
+                                                <connections>
+                                                    <action selector="forgotPassword" destination="X2J-6t-mHg" eventType="touchUpInside" id="62G-PT-qku"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsp-xt-NBD">
                                                 <rect key="frame" x="162" y="0.0" width="135" height="29"/>
@@ -164,7 +167,7 @@
         <image name="WelcomeImage" width="1082" height="832"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

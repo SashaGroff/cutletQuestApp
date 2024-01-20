@@ -26,13 +26,28 @@ final class LoginViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         guard let user = SessionManager.shared.loginUser(login: loginPhoneTF.text!, password: passwordTF.text!) else {
             showAlert(
-                withTitle: "Неверный логин или пароль!",
-                andMessage: "Пожалуйста, введите корректные данные."
+                withTitle: "Ошибка",
+                andMessage: "Неправильно указан логин или пароль. Пожалуйста, введите корректные данные."
             )
             return false
         }
+        CurrentUser.shared.user = user
         return true
     }
+    
+    @IBAction func forgotPassword() {
+            guard let login = loginPhoneTF.text,
+                  !login.isEmpty else {
+                showAlert(withTitle: "Ошибка", andMessage: "Введите логин!")
+                return
+            }
+            
+        if let password = DataStore.shared.users.first(where: { $0.login == login })?.password {
+                showAlert(withTitle: "Ваш пароль", andMessage: password)
+            } else {
+                showAlert(withTitle: "Извините", andMessage: "Такого логина не существует!")
+            }
+        }
     
     @IBAction func registerUserAction() {
         registerUserAlert(
@@ -91,7 +106,7 @@ final class LoginViewController: UIViewController {
                 return
             }
             
-            let user = SessionManager.shared.createUser(login: login, password: password, name: name)
+            _ = SessionManager.shared.createUser(login: login, password: password, name: name)
         }
         
         alert.addAction(regAction)
