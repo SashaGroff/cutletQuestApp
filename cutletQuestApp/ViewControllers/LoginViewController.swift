@@ -14,26 +14,10 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var welcomeLogoView: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-    
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//        guard let user = SessionManager.shared.loginUser(login: loginPhoneTF.text!, password: passwordTF.text!) else {
-//            showAlert(
-//                withTitle: "Ошибка",
-//                andMessage: "Неправильно указан логин или пароль. Пожалуйста, введите корректные данные."
-//            )
-//            return false
-//        }
-//        CurrentUser.shared.user = user
-//        return true
-//    }
     
     @IBAction func loginButtonTapped() {
         performUserLogin()
