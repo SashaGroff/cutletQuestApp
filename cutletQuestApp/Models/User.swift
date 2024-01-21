@@ -28,6 +28,12 @@ final class Cart {
         products
     }
     
+    func getBasketSum() -> Int {
+        products.reduce(0, { partialResult, cartProduct in
+            partialResult + cartProduct.value * cartProduct.key.price
+        })
+    }
+    
     func addToBasket(product: Product) {
         products[product, default: 0] += 1
     }
@@ -45,6 +51,13 @@ final class Cart {
             products.removeValue(forKey: product)
         }
     }
+    
+    func updateBasket(forProduct product: Product,setQuantity quantity: Int) {
+       if products.contains(where: {$0.key == product}) {
+           products[product]! = quantity
+       }
+   }
+
 }
 
 final class CurrentUser {
