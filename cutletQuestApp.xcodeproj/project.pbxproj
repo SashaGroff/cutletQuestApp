@@ -30,7 +30,6 @@
 		F741537E2B5186A900822961 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741537D2B5186A900822961 /* CartViewController.swift */; };
 		F74153802B5186D600822961 /* CartAdviceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741537F2B5186D600822961 /* CartAdviceCellView.swift */; };
 		F74153832B518A8B00822961 /* CartProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74153822B518A8B00822961 /* CartProductCellView.swift */; };
-		F793BFF62B55404E00FA3BB0 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F793BFF52B55404E00FA3BB0 /* ViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +77,6 @@
 		F741537D2B5186A900822961 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F741537F2B5186D600822961 /* CartAdviceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAdviceCellView.swift; sourceTree = "<group>"; };
 		F74153822B518A8B00822961 /* CartProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCellView.swift; sourceTree = "<group>"; };
-		F793BFF52B55404E00FA3BB0 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				6B7E94AF2B39F46B00170816 /* ViewController.swift */,
-				F793BFF52B55404E00FA3BB0 /* ViewControllerTest.swift */,
 				F741537D2B5186A900822961 /* CartViewController.swift */,
 				C448857D2B45BB9F001B52A1 /* WelcomeViewController.swift */,
 				C4BCBE472B45E60E002D2327 /* RegistrationViewController.swift */,
@@ -350,7 +347,6 @@
 			files = (
 				C4BCBE482B45E60E002D2327 /* RegistrationViewController.swift in Sources */,
 				6B7E94B02B39F46B00170816 /* ViewController.swift in Sources */,
-				F793BFF62B55404E00FA3BB0 /* ViewControllerTest.swift in Sources */,
 				6B88B3CC2B4DFE8A000DAB92 /* QuizTableViewCell.swift in Sources */,
 				C448857E2B45BB9F001B52A1 /* WelcomeViewController.swift in Sources */,
 				88C1CDE52B4DBF300044EB9F /* DataStore.swift in Sources */,
