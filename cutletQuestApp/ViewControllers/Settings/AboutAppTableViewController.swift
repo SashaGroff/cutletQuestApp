@@ -9,6 +9,7 @@ import UIKit
 
 final class AboutAppTableViewController: UITableViewController {
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 60

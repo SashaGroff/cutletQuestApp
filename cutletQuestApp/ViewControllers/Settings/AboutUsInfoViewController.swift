@@ -9,18 +9,11 @@ import UIKit
 
 final class AboutUsInfoViewController: UITableViewController {
 
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 90
     }
-    
-
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-
 }
 
 // MARK: - UITableViewDataSource

@@ -8,7 +8,7 @@
 import UIKit
 
 final class SettingsTableViewController: UITableViewController {
-
+    
     // MARK: - IB Outlets
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var telephoneTextField: UITextField!
@@ -21,41 +21,21 @@ final class SettingsTableViewController: UITableViewController {
         
         nameTextField.isUserInteractionEnabled = false
         telephoneTextField.isUserInteractionEnabled = false
-        
-
     }
     
-    // MARK: - Override Keyboard Method
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+    // MARK: - Override Scroll Method
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }
     
+    // MARK: - IB Action Button Exit
     
-   // @IBAction func closeActionButton() {
-        
-   // }
+    // @IBAction func closeActionButton() {
     
-    // MARK: - UITableViewDataSource
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        3
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            3
-        case 1:
-            1
-        default:
-            3
-        }
-    }
+    // }
     
 }
-
-
 // MARK: - UITableViewDelegate
 
 extension SettingsTableViewController {

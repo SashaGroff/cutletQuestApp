@@ -8,12 +8,9 @@
 import UIKit
 
 final class AskingViewController: UIViewController, UITextViewDelegate {
-
+    
     @IBOutlet var textView: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     @IBAction func tappedButton() {
         if textView.text == "" {
@@ -54,7 +51,7 @@ final class AskingViewController: UIViewController, UITextViewDelegate {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-
+    
 }
 
 // MARK: - UITextViewDelegate
