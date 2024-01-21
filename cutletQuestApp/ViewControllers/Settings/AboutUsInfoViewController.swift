@@ -9,6 +9,8 @@ import UIKit
 
 final class AboutUsInfoViewController: UITableViewController {
 
+    private let developers = DataStore.shared.developers
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +26,19 @@ extension AboutUsInfoViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        6
+        developers.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "usInfo", for: indexPath)
-        
+        let developer = developers[indexPath.section]
         var content = cell.defaultContentConfiguration()
-        content.text = "Ссылка на GitHub:"
+        
+        content.text = developer.email
         content.textProperties.font = .boldSystemFont(ofSize: 15)
         content.textProperties.color = .gray
-        content.secondaryText = "https://github.com/NatashaOvdina"
-        content.image = UIImage(named: "Natasha")
+        content.secondaryText = developer.githubURL
+        content.image = UIImage(named: developer.photoURL)
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         
         cell.contentConfiguration = content
@@ -50,8 +53,9 @@ extension AboutUsInfoViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let contentView = UIView()
         let nameLabel = UILabel()
+        let developer = developers[section]
         
-        nameLabel.text = "Наталья Овдина"
+        nameLabel.text = developer.fullName
         nameLabel.font = UIFont.boldSystemFont(ofSize: 17)
         nameLabel.frame = CGRect(x: 10, y: -8, width: tableView.frame.width - 32, height: 30)
         

@@ -145,6 +145,12 @@ final class DataStore {
             email: "alexander@mail.ru",
             githubURL:"github.com/XXNNDDRR",
             photoURL: "Alexander"
+        ),
+        Developer(
+            fullName: "Алексей Кот",
+            email: "lesha@mail.ru",
+            githubURL: "https://github.com/Darncol",
+            photoURL: "Lesha"
         )
     ]
     

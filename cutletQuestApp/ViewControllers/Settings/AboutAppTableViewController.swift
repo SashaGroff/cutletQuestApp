@@ -9,6 +9,8 @@ import UIKit
 
 final class AboutAppTableViewController: UITableViewController {
     
+    private let infoAboutApp = DataStore.shared.aboutApp
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +38,14 @@ final class AboutAppTableViewController: UITableViewController {
                 content.text = "Cайт"
                 content.textProperties.font = .boldSystemFont(ofSize: 16)
                 content.textProperties.color = .black
-                content.secondaryText = "cutletquest.ru"
+                content.secondaryText = infoAboutApp.site
                 cell.contentConfiguration = content
                 return cell
             } else {
                 content.text = "Телефон"
                 content.textProperties.font = .boldSystemFont(ofSize: 16)
                 content.textProperties.color = .black
-                content.secondaryText = "89000202100"
+                content.secondaryText = infoAboutApp.telephone
                 cell.contentConfiguration = content
                 return cell
             }
