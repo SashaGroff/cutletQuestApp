@@ -36,6 +36,8 @@
 		C4BCBE4A2B46062C002D2327 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCBE492B46062C002D2327 /* User.swift */; };
 		F73CE0432B5D8B7400FAAF13 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CE0422B5D8B7400FAAF13 /* CartViewController.swift */; };
 		F73CE0452B5D9B6300FAAF13 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CE0442B5D9B6300FAAF13 /* OrderViewController.swift */; };
+		F73CE0482B5DA2EF00FAAF13 /* Developers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CE0472B5DA2EF00FAAF13 /* Developers.swift */; };
+		F73CE04A2B5DA3B900FAAF13 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CE0492B5DA3B900FAAF13 /* AboutApp.swift */; };
 		F74153802B5186D600822961 /* CartAdviceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741537F2B5186D600822961 /* CartAdviceCellView.swift */; };
 		F74153832B518A8B00822961 /* CartProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74153822B518A8B00822961 /* CartProductCellView.swift */; };
 /* End PBXBuildFile section */
@@ -91,6 +93,8 @@
 		C4BCBE492B46062C002D2327 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F73CE0422B5D8B7400FAAF13 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F73CE0442B5D9B6300FAAF13 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		F73CE0472B5DA2EF00FAAF13 /* Developers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developers.swift; sourceTree = "<group>"; };
+		F73CE0492B5DA3B900FAAF13 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
 		F741537F2B5186D600822961 /* CartAdviceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAdviceCellView.swift; sourceTree = "<group>"; };
 		F74153822B518A8B00822961 /* CartProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +198,8 @@
 				6B7E94DB2B3A676600170816 /* Product.swift */,
 				C4BCBE492B46062C002D2327 /* User.swift */,
 				322F3B312B579C4F000287F6 /* Question.swift */,
+				F73CE0472B5DA2EF00FAAF13 /* Developers.swift */,
+				F73CE0492B5DA3B900FAAF13 /* AboutApp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,6 +401,7 @@
 				32A405942B597439003501E9 /* ResultViewController.swift in Sources */,
 				322F3B342B57A1EA000287F6 /* QuizViewController.swift in Sources */,
 				F74153832B518A8B00822961 /* CartProductCellView.swift in Sources */,
+				F73CE0482B5DA2EF00FAAF13 /* Developers.swift in Sources */,
 				4299355E2B58AA1100EC6409 /* SettingsTableViewController.swift in Sources */,
 				6B7E94DC2B3A676700170816 /* Product.swift in Sources */,
 				6B5800E52B49417800C59391 /* MenuTableViewController.swift in Sources */,
@@ -408,6 +415,7 @@
 				C4BCBE4A2B46062C002D2327 /* User.swift in Sources */,
 				88C1CDE92B4DDCC50044EB9F /* SessionManager.swift in Sources */,
 				F73CE0452B5D9B6300FAAF13 /* OrderViewController.swift in Sources */,
+				F73CE04A2B5DA3B900FAAF13 /* AboutApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

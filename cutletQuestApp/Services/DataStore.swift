@@ -114,6 +114,44 @@ final class DataStore {
         User(login: "+79050019855", password: "123", name: "Rustam")
     ]
     
+    let developers = [
+        Developer(
+            fullName: "Александр Гончаров",
+            email: "sasha@gmail.com",
+            githubURL: "github.com/SashaGroff",
+            photoURL: "SashaGroff"
+        ),
+        Developer(
+            fullName: "Наталья Овдина",
+            email: "natasha@gmail.com",
+            githubURL: "github.com/NatashaOvdina",
+            photoURL: "Natasha"
+        ),
+        Developer(
+            fullName: "Рустам Черезбиев",
+            email: "rustam@mail.ru",
+            githubURL: "github.com/RCherezbiev",
+            photoURL: "Rustam"
+        ),
+        Developer(
+            fullName: "Егор Аблогин",
+            email: "egor@yandex.ru",
+            githubURL: "github.com/egor2810",
+            photoURL: "Egor"
+        ),
+        Developer(
+            fullName: "Александр Гнатенко",
+            email: "alexander@mail.ru",
+            githubURL:"github.com/XXNNDDRR",
+            photoURL: "Alexander"
+        )
+    ]
+    
+    let aboutApp = AboutAppInfo(
+        info: "Мы – доставка ваших любимых бургеров прямиком из ресторана «Cutlet Quest» в любую точку Москвы. Свежайшее мясо и овощи, вкусные горячие булочки и вкуснейшие напитки превратят ваш домашний ужин или обед в офисе в восхитительный опыт, который будет радовать не только ваш желудок, но и поднимать настроение на весь день.",
+        site: "cutletQuest.ru",
+        telephone: "89000202100"
+    )
     
     private init() {}
     
