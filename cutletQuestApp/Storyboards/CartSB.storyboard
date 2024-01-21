@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wer-VD-dRS">
-                                <rect key="frame" x="0.0" y="116" width="414" height="495"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="547"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartProductCell" rowHeight="152" id="ct8-1z-gfz" customClass="CartProductCellView" customModule="cutletQuestApp" customModuleProvider="target">
@@ -154,6 +154,7 @@
                     <navigationItem key="navigationItem" title="Корзина" id="2pP-xa-dpW"/>
                     <connections>
                         <outlet property="orderButton" destination="8EB-9O-eKg" id="erH-JF-wlX"/>
+                        <outlet property="tableView" destination="wer-VD-dRS" id="rHS-fG-3qo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

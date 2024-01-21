@@ -11,25 +11,29 @@ final class CartViewController: UIViewController {
     
     @IBOutlet weak var orderButton: UIButton!
     
-    private var cart: Cart?
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var cart = CurrentUser.shared.user?.basket
     
     override func viewDidLoad() {
-        cart = CurrentUser.shared.user?.basket
-
         orderButton.layer.cornerRadius = 10
         
         refreshOrderButton()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        let haveProducts = cart?.getBasket().count ?? 0 > 0
+        let haveProducts = CurrentUser.shared.user?.basket.getBasket().count ?? 0 > 0
             
         return haveProducts
         
     }
     
     private func getOrderSum() -> String {
-        cart?.getBasketSum().description ?? "0"
+        CurrentUser.shared.user?.basket.getBasketSum().description ?? "0"
     }
     
     private func refreshOrderButton() {
@@ -41,7 +45,7 @@ final class CartViewController: UIViewController {
 extension CartViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cart?.getBasket().count ?? 1
+        CurrentUser.shared.user?.basket.getBasket().count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,7 +54,7 @@ extension CartViewController: UITableViewDataSource {
             for: indexPath
         ) as! CartProductCellView
         
-        if let product = cart?.getBasket().sorted(by: {
+        if let product = CurrentUser.shared.user?.basket.getBasket().sorted(by: {
             $0.key.name > $1.key.name
         })[indexPath.row] {
             
@@ -64,16 +68,19 @@ extension CartViewController: UITableViewDataSource {
             cell.product = product.key
             
             cell.onStepperValueChanged = { newValue, productCell in
-                let currentValue = Int(newValue)
+
+                let currentAmount = CurrentUser.shared.user?.basket.getBasket()[productCell] ?? 0
+                let stepperAmount = Int(newValue)
+                
                 guard let index = tableView.indexPath(for: cell) else {return}
                 
-                self.cart?.updateBasket(
-                    forProduct: productCell,
-                    setQuantity: currentValue
-                )
+                if currentAmount < stepperAmount {
+                    CurrentUser.shared.user?.basket.addToBasket(product: productCell)
+                } else if currentAmount > stepperAmount {
+                    CurrentUser.shared.user?.basket.removeFromBasket(product: productCell)
+                }
                 
                 if newValue == 0 {
-                    self.cart?.removeFromBasket(product: productCell)
                     tableView.deleteRows(at: [index], with: .automatic)
                 }
                 self.refreshOrderButton()
@@ -85,3 +92,8 @@ extension CartViewController: UITableViewDataSource {
 
 }
 
+extension CartViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}

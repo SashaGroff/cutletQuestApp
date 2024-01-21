@@ -53,6 +53,7 @@ final class LoginViewController: UIViewController {
         
         if let user = SessionManager.shared.loginUser(login: login, password: password) {
             CurrentUser.shared.user = user
+            CurrentMenu.shared.products = SessionManager.shared.getMenu()
             performSegue(withIdentifier: "loginButton", sender: nil)
         } else {
             showAlert(withTitle: "Ошибка", andMessage: "Неверное имя или пароль!")

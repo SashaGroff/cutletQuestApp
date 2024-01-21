@@ -38,7 +38,6 @@
 		F73CE0452B5D9B6300FAAF13 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CE0442B5D9B6300FAAF13 /* OrderViewController.swift */; };
 		F73CE0482B5DA2EF00FAAF13 /* Developers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CE0472B5DA2EF00FAAF13 /* Developers.swift */; };
 		F73CE04A2B5DA3B900FAAF13 /* AboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73CE0492B5DA3B900FAAF13 /* AboutApp.swift */; };
-		F74153802B5186D600822961 /* CartAdviceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741537F2B5186D600822961 /* CartAdviceCellView.swift */; };
 		F74153832B518A8B00822961 /* CartProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74153822B518A8B00822961 /* CartProductCellView.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +94,6 @@
 		F73CE0442B5D9B6300FAAF13 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		F73CE0472B5DA2EF00FAAF13 /* Developers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developers.swift; sourceTree = "<group>"; };
 		F73CE0492B5DA3B900FAAF13 /* AboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutApp.swift; sourceTree = "<group>"; };
-		F741537F2B5186D600822961 /* CartAdviceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAdviceCellView.swift; sourceTree = "<group>"; };
 		F74153822B518A8B00822961 /* CartProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,7 +247,6 @@
 		F74153812B5186DC00822961 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F741537F2B5186D600822961 /* CartAdviceCellView.swift */,
 				F74153822B518A8B00822961 /* CartProductCellView.swift */,
 			);
 			path = Views;
@@ -409,7 +406,6 @@
 				322F3B322B579C4F000287F6 /* Question.swift in Sources */,
 				429935602B59499000EC6409 /* AboutUsInfoViewController.swift in Sources */,
 				6B7E94AC2B39F46B00170816 /* AppDelegate.swift in Sources */,
-				F74153802B5186D600822961 /* CartAdviceCellView.swift in Sources */,
 				6B7E94AE2B39F46B00170816 /* SceneDelegate.swift in Sources */,
 				429935622B59D82E00EC6409 /* AboutAppTableViewController.swift in Sources */,
 				C4BCBE4A2B46062C002D2327 /* User.swift in Sources */,
