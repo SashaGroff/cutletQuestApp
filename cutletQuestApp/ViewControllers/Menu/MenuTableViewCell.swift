@@ -9,14 +9,13 @@ import UIKit
 
 final class MenuTableViewCell: UITableViewCell {
     @IBOutlet var productImage: UIImageView!
+    
     @IBOutlet var productName: UILabel!
     @IBOutlet var productDescription: UILabel!
     @IBOutlet weak var productAmmount: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     
     private var product: Product?
-    
-    // MARK: - IB Actions
     
     @IBAction func productStepper(_ sender: UIStepper) {
         guard let product = product else { return }
@@ -35,7 +34,6 @@ final class MenuTableViewCell: UITableViewCell {
         animateProductAmmount()
     }
     
-    // MARK: - Public Methods
     func configureCell(product: Product) {
         self.product = product
         productImage.image = UIImage(named: product.pictureURL)
@@ -45,13 +43,13 @@ final class MenuTableViewCell: UITableViewCell {
     }
     
     private func animateProductAmmount() {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.productAmmount.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            self.productAmmount.alpha = 1.0
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.productAmmount.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            self?.productAmmount.alpha = 1.0
         }) { _ in
-            UIView.animate(withDuration: 0.2) {
-                self.productAmmount.transform = CGAffineTransform.identity
-                self.productAmmount.alpha = 0.5
+            UIView.animate(withDuration: 0.2) { [weak self] in
+                self?.productAmmount.transform = CGAffineTransform.identity
+                self?.productAmmount.alpha = 0.5
             }
         }
     }

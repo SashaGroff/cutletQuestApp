@@ -8,20 +8,12 @@
 import UIKit
 
 final class MenuTableViewController: UITableViewController {
-    // MARK: - Public Properties
-    
-    // MARK: - View Life Cycles
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
-    @IBAction func startQuizButton(_ sender: UIBarButtonItem) {
-    }
-    
-    
-    // MARK: - Table View data Source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.section == 0 {
             let productCell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! MenuTableViewCell
             productCell.configureCell(product: CurrentMenu.shared.products[indexPath.row])
