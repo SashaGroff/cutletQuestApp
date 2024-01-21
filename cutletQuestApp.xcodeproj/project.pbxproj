@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		420A2E332B5A8B90005091AC /* AppInfoFullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420A2E322B5A8B90005091AC /* AppInfoFullViewController.swift */; };
+		427FD8B22B5D6B2500D8FF86 /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FD8B12B5D6B2500D8FF86 /* EmailTableViewCell.swift */; };
 		4299355C2B58A93900EC6409 /* AskingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355B2B58A93900EC6409 /* AskingViewController.swift */; };
 		4299355E2B58AA1100EC6409 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */; };
 		429935602B59499000EC6409 /* AboutUsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		420A2E322B5A8B90005091AC /* AppInfoFullViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoFullViewController.swift; sourceTree = "<group>"; };
+		427FD8B12B5D6B2500D8FF86 /* EmailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
 		4299355B2B58A93900EC6409 /* AskingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskingViewController.swift; sourceTree = "<group>"; };
 		4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsInfoViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */,
+				427FD8B12B5D6B2500D8FF86 /* EmailTableViewCell.swift */,
 				4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */,
 				4299355B2B58A93900EC6409 /* AskingViewController.swift */,
 				429935612B59D82E00EC6409 /* AboutAppTableViewController.swift */,
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427FD8B22B5D6B2500D8FF86 /* EmailTableViewCell.swift in Sources */,
 				C4BCBE482B45E60E002D2327 /* RegistrationViewController.swift in Sources */,
 				4299355C2B58A93900EC6409 /* AskingViewController.swift in Sources */,
 				6B7E94B02B39F46B00170816 /* ViewController.swift in Sources */,

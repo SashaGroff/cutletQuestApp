@@ -13,7 +13,6 @@ final class AskingViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textView.delegate = self
     }
     
     @IBAction func tappedButton() {
@@ -35,11 +34,7 @@ final class AskingViewController: UIViewController, UITextViewDelegate {
         dismiss(animated: true)
     }
     
-    // MARK: - Override Keyboard Method
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
+    
     
     
     // MARK: - Private Method Alert

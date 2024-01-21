@@ -12,31 +12,29 @@ final class SettingsTableViewController: UITableViewController {
     // MARK: - IB Outlets
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var telephoneTextField: UITextField!
-    @IBOutlet var emailTextField: UITextField!
     @IBOutlet var switchParameter: UISwitch!
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         switchParameter.isOn = false
+        
         nameTextField.isUserInteractionEnabled = false
-        telephoneTextField.isUserInteractionEnabled = false 
-    }
+        telephoneTextField.isUserInteractionEnabled = false
+        
 
+    }
+    
     // MARK: - Override Keyboard Method
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-    }
-
-
-    @IBAction func closeActionButton() {
+    
+   // @IBAction func closeActionButton() {
         
-    }
+   // }
     
     // MARK: - UITableViewDataSource
     
@@ -54,24 +52,9 @@ final class SettingsTableViewController: UITableViewController {
             3
         }
     }
-
+    
 }
 
-
-
-// MARK: - Switch Private Parameters
-
-// Сохранение состояния переключателя для пользователя
-private func saveSwitchStateForUser(username: String, phoneNumber: String, switchState: Bool) {
-    let userDefaults = UserDefaults.standard
-    userDefaults.set(switchState, forKey: "\(username)-\(phoneNumber)-switchState")
-}
-
-// Загрузка состояния переключателя для пользователя
-private  func loadSwitchStateForUser(username: String, phoneNumber: String) -> Bool? {
-    let userDefaults = UserDefaults.standard
-    return userDefaults.bool(forKey: "\(username)-\(phoneNumber)-switchState")
-}
 
 // MARK: - UITableViewDelegate
 
