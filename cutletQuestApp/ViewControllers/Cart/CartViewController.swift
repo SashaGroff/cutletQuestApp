@@ -21,6 +21,13 @@ final class CartViewController: UIViewController {
         refreshOrderButton()
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let haveProducts = cart?.getBasket().count ?? 0 > 0
+            
+        return haveProducts
+        
+    }
+    
     private func getOrderSum() -> String {
         cart?.getBasketSum().description ?? "0"
     }

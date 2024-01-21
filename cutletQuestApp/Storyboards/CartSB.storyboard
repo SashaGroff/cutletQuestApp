@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wer-VD-dRS">
-                                <rect key="frame" x="0.0" y="64" width="414" height="547"/>
+                                <rect key="frame" x="0.0" y="116" width="414" height="495"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartProductCell" rowHeight="152" id="ct8-1z-gfz" customClass="CartProductCellView" customModule="cutletQuestApp" customModuleProvider="target">
@@ -162,12 +163,34 @@
         <!--Корзина-->
         <scene sceneID="dph-Vh-o9t">
             <objects>
-                <viewController id="s5i-Ct-tB1" sceneMemberID="viewController">
+                <viewController id="s5i-Ct-tB1" customClass="OrderViewController" customModule="cutletQuestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Og-Yv-XjD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спасибо что выбрали нас!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifa-eg-xUO">
+                                <rect key="frame" x="101" y="347.66666666666669" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krO-xZ-oy0">
+                                <rect key="frame" x="170.33333333333334" y="661" width="73.333333333333343" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                                <connections>
+                                    <action selector="backButtonTapped" destination="s5i-Ct-tB1" eventType="touchUpInside" id="78P-2u-Tvy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3GY-8v-fPr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ifa-eg-xUO" firstAttribute="centerY" secondItem="6Og-Yv-XjD" secondAttribute="centerY" id="0TR-He-M6H"/>
+                            <constraint firstItem="krO-xZ-oy0" firstAttribute="centerX" secondItem="6Og-Yv-XjD" secondAttribute="centerX" id="TXY-4u-X31"/>
+                            <constraint firstItem="ifa-eg-xUO" firstAttribute="centerX" secondItem="6Og-Yv-XjD" secondAttribute="centerX" id="XaJ-eF-N6i"/>
+                            <constraint firstItem="3GY-8v-fPr" firstAttribute="bottom" secondItem="krO-xZ-oy0" secondAttribute="bottom" constant="20" id="mvg-RX-iEr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Корзина" id="4Ik-kX-ffU"/>
                 </viewController>
