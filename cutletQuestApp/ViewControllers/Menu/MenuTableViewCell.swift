@@ -40,16 +40,20 @@ final class MenuTableViewCell: UITableViewCell {
         productName.text = product.name
         productDescription.text = product.description
         productPrice.text = "\(product.price.formatted())₽"
+        
+        let amountInBasket = CurrentUser.shared.user?.basket.getBasket()[product] ?? 0
+        productAmmount.text = "X\(amountInBasket)"
+        productAmmount.isHidden = amountInBasket == 0
     }
     
     private func animateProductAmmount() {
-        UIView.animate(withDuration: 0.2, animations: { [weak self] in
-            self?.productAmmount.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            self?.productAmmount.alpha = 1.0
+        UIView.animate(withDuration: 0.2, animations: { [self] in
+            productAmmount.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            productAmmount.alpha = 1.0
         }) { _ in
-            UIView.animate(withDuration: 0.2) { [weak self] in
-                self?.productAmmount.transform = CGAffineTransform.identity
-                self?.productAmmount.alpha = 0.5
+            UIView.animate(withDuration: 0.2) { [self] in
+                productAmmount.transform = CGAffineTransform.identity
+                productAmmount.alpha = 0.5
             }
         }
     }
