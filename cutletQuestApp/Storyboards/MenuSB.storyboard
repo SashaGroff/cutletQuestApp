@@ -49,7 +49,7 @@
                                             <rect key="frame" x="279" y="147" width="94" height="32"/>
                                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                             <connections>
-                                                <action selector="productStepper:" destination="1sa-hd-4p2" eventType="valueChanged" id="Bd8-DC-xC8"/>
+                                                <action selector="productStepper" destination="1sa-hd-4p2" eventType="valueChanged" id="ord-Uk-64M"/>
                                             </connections>
                                         </stepper>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xi-2y-hyU">
@@ -85,6 +85,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ammountStepper" destination="ZlW-LK-5rs" id="HDQ-Gc-gkH"/>
                                     <outlet property="productAmmount" destination="0xi-2y-hyU" id="gln-GD-VBC"/>
                                     <outlet property="productDescription" destination="6xe-8g-Vub" id="S8e-I7-aN2"/>
                                     <outlet property="productImage" destination="F62-I3-367" id="L6P-1S-sr3"/>

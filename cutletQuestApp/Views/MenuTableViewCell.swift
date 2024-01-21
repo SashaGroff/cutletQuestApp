@@ -15,14 +15,16 @@ final class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var productAmmount: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     
+    @IBOutlet weak var ammountStepper: UIStepper!
+    
     private var product: Product?
     
-    @IBAction func productStepper(_ sender: UIStepper) {
+    @IBAction func productStepper() {
         guard let product = product else { return }
         
         let currentAmount = CurrentUser.shared.user?.basket.getBasket()[product] ?? 0
-        let stepperAmount = Int(sender.value)
-        productAmmount.isHidden = sender.value == 0
+        let stepperAmount = Int(ammountStepper.value)
+        productAmmount.isHidden = ammountStepper.value == 0
         
         if currentAmount < stepperAmount {
             CurrentUser.shared.user?.basket.addToBasket(product: product)
@@ -44,6 +46,7 @@ final class MenuTableViewCell: UITableViewCell {
         let amountInBasket = CurrentUser.shared.user?.basket.getBasket()[product] ?? 0
         productAmmount.text = "X\(amountInBasket)"
         productAmmount.isHidden = amountInBasket == 0
+        ammountStepper.value = Double(amountInBasket)
     }
     
     private func animateProductAmmount() {
