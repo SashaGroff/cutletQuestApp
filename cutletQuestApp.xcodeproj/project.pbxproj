@@ -76,8 +76,7 @@
 		88C1CDE82B4DDCC50044EB9F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		C448857D2B45BB9F001B52A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4BCBE492B46062C002D2327 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F73CE0422B5D8B7400FAAF13 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartViewController.swift; path = cutletQuestApp/ViewControllers/CartViewController.swift; sourceTree = "<group>"; };
-		F741537D2B5186A900822961 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		F73CE0422B5D8B7400FAAF13 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F741537F2B5186D600822961 /* CartAdviceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAdviceCellView.swift; sourceTree = "<group>"; };
 		F74153822B518A8B00822961 /* CartProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +132,6 @@
 		6B7E949F2B39F46A00170816 = {
 			isa = PBXGroup;
 			children = (
-				F73CE0422B5D8B7400FAAF13 /* CartViewController.swift */,
 				6B7E94AA2B39F46B00170816 /* cutletQuestApp */,
 				6B7E94A92B39F46B00170816 /* Products */,
 				F73CE0412B5D89CE00FAAF13 /* Recovered References */,
@@ -187,6 +185,7 @@
 		6BA2788B2B3B5708007D56E8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F73CE0422B5D8B7400FAAF13 /* CartViewController.swift */,
 				6B7E94AF2B39F46B00170816 /* ViewController.swift */,
 				322F3B332B57A1EA000287F6 /* QuizViewController.swift */,
 				32A405932B597439003501E9 /* ResultViewController.swift */,
@@ -208,7 +207,6 @@
 		F73CE0412B5D89CE00FAAF13 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				F741537D2B5186A900822961 /* CartViewController.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
