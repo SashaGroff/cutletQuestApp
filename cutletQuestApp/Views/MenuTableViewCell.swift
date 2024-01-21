@@ -20,20 +20,10 @@ final class MenuTableViewCell: UITableViewCell {
     private var product: Product?
     
     @IBAction func productStepper() {
-        guard let product = product else { return }
-        
-        let currentAmount = CurrentUser.shared.user?.basket.getBasket()[product] ?? 0
         let stepperAmount = Int(ammountStepper.value)
-        productAmmount.isHidden = ammountStepper.value == 0
         
-        if currentAmount < stepperAmount {
-            CurrentUser.shared.user?.basket.addToBasket(product: product)
-        } else if currentAmount > stepperAmount {
-            CurrentUser.shared.user?.basket.removeFromBasket(product: product)
-        }
-        
-        productAmmount.text = "X\(stepperAmount)"
-        animateProductAmmount()
+        updateProductAmountInBasket(to: stepperAmount)
+        updateProductAmountLabel(stepperAmount)
     }
     
     func configureCell(product: Product) {
@@ -49,18 +39,21 @@ final class MenuTableViewCell: UITableViewCell {
         ammountStepper.value = Double(amountInBasket)
     }
     
-    private func animateProductAmmount() {
-        UIView.animate(withDuration: 0.2, animations: { [self] in
-            productAmmount.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-            productAmmount.alpha = 1.0
-        }) { _ in
-            UIView.animate(withDuration: 0.2) { [self] in
-                productAmmount.transform = CGAffineTransform.identity
-                productAmmount.alpha = 0.5
-            }
+    private func updateProductAmountInBasket(to amount: Int) {
+        guard let product = product  else { return }
+        
+        let currentAmount = CurrentUser.shared.user?.basket.getBasket()[product] ?? 0
+        
+        if currentAmount < amount {
+            CurrentUser.shared.user?.basket.addToBasket(product: product)
+        } else if currentAmount > amount {
+            CurrentUser.shared.user?.basket.removeFromBasket(product: product)
         }
     }
+    
+    private func updateProductAmountLabel(_ amount: Int) {
+        productAmmount.isHidden = amount == 0
+        productAmmount.text = "X\(amount)"
+        productAmmount.animate()
+    }
 }
-
-
-
