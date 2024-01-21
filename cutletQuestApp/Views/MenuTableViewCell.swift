@@ -35,7 +35,6 @@ final class MenuTableViewCell: UITableViewCell {
     }
     
     func configureCell(product: Product) {
-        print(product)
         self.product = product
         productImage.image = UIImage(named: product.pictureURL)
         productName.text = product.name
@@ -59,3 +58,6 @@ final class MenuTableViewCell: UITableViewCell {
         }
     }
 }
+
+
+
