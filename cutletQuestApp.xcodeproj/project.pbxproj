@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B14852D2B45ACC400347171 /* WelcomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */; };
 		6B1485312B45AFAC00347171 /* AboutUsSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */; };
 		6B1485332B45B00F00347171 /* CartSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1485322B45B00F00347171 /* CartSB.storyboard */; };
 		6B2268752B5450C8003A1F2A /* QuizSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B2268742B5450C8003A1F2A /* QuizSB.storyboard */; };
@@ -24,8 +23,7 @@
 		6B88B3CC2B4DFE8A000DAB92 /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88B3CB2B4DFE8A000DAB92 /* QuizTableViewCell.swift */; };
 		88C1CDE52B4DBF300044EB9F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1CDE42B4DBF300044EB9F /* DataStore.swift */; };
 		88C1CDE92B4DDCC50044EB9F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C1CDE82B4DDCC50044EB9F /* SessionManager.swift */; };
-		C448857E2B45BB9F001B52A1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448857D2B45BB9F001B52A1 /* WelcomeViewController.swift */; };
-		C4BCBE482B45E60E002D2327 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCBE472B45E60E002D2327 /* RegistrationViewController.swift */; };
+		C448857E2B45BB9F001B52A1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448857D2B45BB9F001B52A1 /* LoginViewController.swift */; };
 		C4BCBE4A2B46062C002D2327 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCBE492B46062C002D2327 /* User.swift */; };
 		F741537E2B5186A900822961 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741537D2B5186A900822961 /* CartViewController.swift */; };
 		F74153802B5186D600822961 /* CartAdviceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741537F2B5186D600822961 /* CartAdviceCellView.swift */; };
@@ -50,7 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeSB.storyboard; sourceTree = "<group>"; };
 		6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutUsSB.storyboard; sourceTree = "<group>"; };
 		6B1485322B45B00F00347171 /* CartSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartSB.storyboard; sourceTree = "<group>"; };
 		6B2268742B5450C8003A1F2A /* QuizSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizSB.storyboard; sourceTree = "<group>"; };
@@ -71,8 +68,7 @@
 		6B88B3CB2B4DFE8A000DAB92 /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
 		88C1CDE42B4DBF300044EB9F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		88C1CDE82B4DDCC50044EB9F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		C448857D2B45BB9F001B52A1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		C4BCBE472B45E60E002D2327 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		C448857D2B45BB9F001B52A1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C4BCBE492B46062C002D2327 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F741537D2B5186A900822961 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F741537F2B5186D600822961 /* CartAdviceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartAdviceCellView.swift; sourceTree = "<group>"; };
@@ -111,7 +107,6 @@
 				6B5800E22B493E6000C59391 /* MenuSB.storyboard */,
 				6B1485322B45B00F00347171 /* CartSB.storyboard */,
 				6B1485302B45AFAC00347171 /* AboutUsSB.storyboard */,
-				6B14852C2B45ACC400347171 /* WelcomeSB.storyboard */,
 				6B7E94B62B39F46F00170816 /* LaunchScreen.storyboard */,
 				6B2268742B5450C8003A1F2A /* QuizSB.storyboard */,
 			);
@@ -184,8 +179,8 @@
 			children = (
 				6B7E94AF2B39F46B00170816 /* ViewController.swift */,
 				F741537D2B5186A900822961 /* CartViewController.swift */,
-				C448857D2B45BB9F001B52A1 /* WelcomeViewController.swift */,
 				C4BCBE472B45E60E002D2327 /* RegistrationViewController.swift */,
+				C448857D2B45BB9F001B52A1 /* LoginViewController.swift */,
 				6B88B3CA2B4DFE43000DAB92 /* Menu */,
 			);
 			path = ViewControllers;
@@ -313,7 +308,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B14852D2B45ACC400347171 /* WelcomeSB.storyboard in Resources */,
 				6B7E94B82B39F46F00170816 /* LaunchScreen.storyboard in Resources */,
 				6B5800E32B493E6000C59391 /* MenuSB.storyboard in Resources */,
 				6B7E94B52B39F46F00170816 /* Assets.xcassets in Resources */,
@@ -345,10 +339,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4BCBE482B45E60E002D2327 /* RegistrationViewController.swift in Sources */,
 				6B7E94B02B39F46B00170816 /* ViewController.swift in Sources */,
 				6B88B3CC2B4DFE8A000DAB92 /* QuizTableViewCell.swift in Sources */,
-				C448857E2B45BB9F001B52A1 /* WelcomeViewController.swift in Sources */,
+				C448857E2B45BB9F001B52A1 /* LoginViewController.swift in Sources */,
 				88C1CDE52B4DBF300044EB9F /* DataStore.swift in Sources */,
 				F74153832B518A8B00822961 /* CartProductCellView.swift in Sources */,
 				6B7E94DC2B3A676700170816 /* Product.swift in Sources */,
