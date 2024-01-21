@@ -27,6 +27,9 @@ final class WelcomeViewController: UIViewController {
     // MARK: - Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        CurrentUser.shared.user = SessionManager.shared.loginUser(login: "1", password: "1")
+        CurrentMenu.shared.products = SessionManager.shared.getMenu()
+        
         welcomeLogoView.image = welcomeImage
         welcomeLogoView.transform = CGAffineTransform(scaleX: scale, y: scale)
     }

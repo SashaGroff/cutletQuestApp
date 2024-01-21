@@ -11,7 +11,7 @@ class User {
     let login: String
     let password: String
     let name: String
-    let basket: Cart
+    var basket: Cart
     
     init(login: String, password: String, name: String) {
         self.login = login
