@@ -67,6 +67,9 @@ final class QuizViewController: UIViewController {
         answersChosen.append(currentAnswers[index])
         nextQuestion()
     }
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
 }
 
 private extension QuizViewController {

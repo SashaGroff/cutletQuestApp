@@ -128,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				4299355D2B58AA1100EC6409 /* SettingsTableViewController.swift */,
-				427FD8B12B5D6B2500D8FF86 /* EmailTableViewCell.swift */,
 				4299355F2B59499000EC6409 /* AboutUsInfoViewController.swift */,
 				4299355B2B58A93900EC6409 /* AskingViewController.swift */,
 				429935612B59D82E00EC6409 /* AboutAppTableViewController.swift */,
@@ -209,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				6B5800E42B49417800C59391 /* MenuTableViewController.swift */,
-				6B88B3CB2B4DFE8A000DAB92 /* QuizTableViewCell.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -257,6 +255,8 @@
 		F74153812B5186DC00822961 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6B88B3CB2B4DFE8A000DAB92 /* QuizTableViewCell.swift */,
+				427FD8B12B5D6B2500D8FF86 /* EmailTableViewCell.swift */,
 				6B5800E62B4947D900C59391 /* MenuTableViewCell.swift */,
 				F74153822B518A8B00822961 /* CartProductCellView.swift */,
 			);

@@ -47,6 +47,7 @@ final class LoginViewController: UIViewController {
     @IBAction func unwindToFirstScreen(_ unwindSegue: UIStoryboardSegue) {
         loginPhoneTF.text = ""
         passwordTF.text = "" 
+        CurrentUser.shared.user = nil
     }
     
     private func performUserLogin() {

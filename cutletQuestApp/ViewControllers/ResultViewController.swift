@@ -15,6 +15,8 @@ final class ResultViewController: UIViewController {
     
     var answers: [Answer]!
     
+    private var burgerForCart: Product?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
@@ -26,6 +28,11 @@ final class ResultViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func addToCartButtonTapped() {
+        guard let burgerForCart else {return}
+        CurrentUser.shared.user?.basket.addToBasket(product: burgerForCart)
+        dismiss(animated: true)
+    }
 }
 
 extension ResultViewController {
@@ -38,16 +45,16 @@ extension ResultViewController {
             frequencyBurgers[burger, default: 0] += 1
         }
         
-        
         let sortedFrequentBurgers = frequencyBurgers.sorted { $0.value > $1.value }
         guard let mostFrequentBurger = sortedFrequentBurgers.first?.key else { return }
         
+        burgerForCart = mostFrequentBurger.menuBurger
         updateUI(with: mostFrequentBurger)
     }
     
     private func updateUI(with burger: Burger) {
-        burgerTypeLabel.text = "Наша рекомендация – \(burger.rawValue)!"
-        descriptionLabel.text = burger.definition
+        burgerTypeLabel.text = "Наша рекомендация – \(burger.menuBurger?.name ?? "")!"
+        descriptionLabel.text = burger.menuBurger?.description ?? ""
     }
     
 }

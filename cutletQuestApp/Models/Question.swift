@@ -59,22 +59,23 @@ struct Answer {
     let burger: Burger
 }
 
-enum Burger: String {
-    case chickenBurger = "Горячая цыпочка"
-    case veganBurger = "Зеленый Завоеватель"
-    case bigBurger = "Чемпион"
-    case fishBurger = "Морской Победитель"
+enum Burger {
     
-    var definition: String {
+    case chickenBurger
+    case veganBurger
+    case bigBurger
+    case fishBurger
+    
+    var menuBurger: Product? {
         switch self {
         case .chickenBurger:
-            return "Острый куриный бургер – куриное мясо, погруженное в пламень острого вкуса, создающее неотразимое сочетание острых ощущений и победного настроения."
+                return CurrentMenu.shared.products.first(where: {$0.name == "Острый куриный бургер"})
         case .veganBurger:
-            return "Веганский портобелло-бургер – веганский бургер, представляющий собой совершенное сочетание растительности, интеллектуальной осознанности и веселого настроения."
+                return CurrentMenu.shared.products.first(where: {$0.name == "Веганский портобелло-бургер"})
         case .bigBurger:
-            return "Черный бургер – сочное говяжье мясо, завернутое в ароматную булочку, подчеркнутое мощным соусом, который дает заряд силы и энергии."
+                return CurrentMenu.shared.products.first(where: {$0.name == "Черный бургер"})
         case .fishBurger:
-            return "Бургер с лососем Терияки – нежный кусочек рыбы, плавающий в море вдохновения, с приятными нотками гармонии и спокойствия."
+                return CurrentMenu.shared.products.first(where: {$0.name == "Бургер с лососем Терияки"})
         }
     }
 }
