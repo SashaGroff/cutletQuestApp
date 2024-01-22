@@ -119,7 +119,7 @@
                                 <rect key="frame" x="0.0" y="611" width="414" height="76"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EB-9O-eKg">
-                                        <rect key="frame" x="16" y="16" width="382" height="60"/>
+                                        <rect key="frame" x="16" y="16" width="382" height="44"/>
                                         <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -132,7 +132,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="Jqc-M3-Lj1"/>
                                     <constraint firstAttribute="trailing" secondItem="8EB-9O-eKg" secondAttribute="trailing" constant="16" id="XuD-q5-Meq"/>
-                                    <constraint firstAttribute="bottom" secondItem="8EB-9O-eKg" secondAttribute="bottom" id="a5L-cc-DdL"/>
+                                    <constraint firstAttribute="bottom" secondItem="8EB-9O-eKg" secondAttribute="bottom" constant="16" id="a5L-cc-DdL"/>
                                     <constraint firstItem="8EB-9O-eKg" firstAttribute="leading" secondItem="eHD-21-FIX" secondAttribute="leading" constant="16" id="c1C-n9-4MQ"/>
                                     <constraint firstItem="8EB-9O-eKg" firstAttribute="top" secondItem="eHD-21-FIX" secondAttribute="top" constant="16" id="umA-py-XGi"/>
                                 </constraints>
