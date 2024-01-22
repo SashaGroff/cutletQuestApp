@@ -24,7 +24,7 @@
                             <color key="tintColor" systemColor="systemCyanColor"/>
                             <buttonConfiguration key="configuration" style="filled" title="Выход" titleAlignment="center"/>
                             <connections>
-                                <action selector="closeActionButton" destination="kmD-2D-jId" eventType="touchUpInside" id="6AV-mp-nO0"/>
+                                <segue destination="Xh8-mg-79Q" kind="unwind" unwindAction="unwindToFirstScreen:" id="xrC-Zx-QfO"/>
                             </connections>
                         </button>
                         <sections>
@@ -190,6 +190,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPH-D3-fOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Xh8-mg-79Q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3861.8320610687019" y="147.88732394366198"/>
         </scene>
@@ -347,9 +348,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeM-nH-MAu">
-                                <rect key="frame" x="20" y="245.33333333333337" width="353" height="182.66666666666663"/>
-                                <string key="text">Мы – доставка ваших любимых бургеров прямиком из ресторана «Cutlet Quest» в любую точку Москвы. Свежайшее мясо и овощи, вкусные горячие булочки и вкуснейшие напитки превратят ваш домашний ужин или обед в офисе в восхитительный опыт, который будет радовать не только ваш желудок, но и поднимать настроение на весь день.</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст про наш ресторан/приложение" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeM-nH-MAu">
+                                <rect key="frame" x="20" y="245.33333333333334" width="353" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

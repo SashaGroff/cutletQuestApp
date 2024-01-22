@@ -21,6 +21,9 @@ final class SettingsTableViewController: UITableViewController {
         
         nameTextField.isUserInteractionEnabled = false
         telephoneTextField.isUserInteractionEnabled = false
+    
+        nameTextField.text = CurrentUser.shared.user?.name
+        telephoneTextField.text = CurrentUser.shared.user?.login
     }
     
     // MARK: - Override Scroll Method
@@ -28,13 +31,6 @@ final class SettingsTableViewController: UITableViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }
-    
-    // MARK: - IB Action Button Exit
-    
-    // @IBAction func closeActionButton() {
-    
-    // }
-    
 }
 // MARK: - UITableViewDelegate
 
