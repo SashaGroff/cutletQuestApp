@@ -19,6 +19,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         UIButton.appearance().titleLabel?.font = UIFont(name: "System", size: 17)
         
+        UITableViewCell.appearance().backgroundColor = .systemGray6
+        
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
         UITabBar.appearance().standardAppearance = tabBarAppearance
