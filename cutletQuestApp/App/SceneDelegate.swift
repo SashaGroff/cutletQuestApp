@@ -16,7 +16,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         UIView.appearance().tintColor = .systemOrange
         UIBarButtonItem.appearance().tintColor = .systemOrange
-        UITableViewCell.appearance().backgroundColor = .systemGray6
+        UITableViewCell.appearance().backgroundColor = .systemGray5
         
         UIButton.appearance().titleLabel?.font = UIFont(name: "System", size: 17)
         
