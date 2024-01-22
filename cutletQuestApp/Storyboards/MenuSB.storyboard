@@ -116,7 +116,7 @@
                                             <buttonConfiguration key="configuration" style="filled" title="Пройти квиз!"/>
                                             <connections>
                                                 <action selector="quizButtonPressed" destination="oQs-yW-Inc" eventType="touchUpInside" id="zN6-nZ-loM"/>
-                                                <segue destination="6NG-er-2qw" kind="presentation" id="kWc-Rf-I7W"/>
+                                                <segue destination="6NG-er-2qw" kind="show" id="kWc-Rf-I7W"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -187,7 +187,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kWc-Rf-I7W"/>
+        <segue reference="vwE-Mt-SE6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
