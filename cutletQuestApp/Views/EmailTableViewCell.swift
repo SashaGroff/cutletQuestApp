@@ -16,17 +16,14 @@ final class EmailTableViewCell: UITableViewCell {
         emailTextField.delegate = self
     }
     
-    
     @IBAction func buttonEmailAction(_ sender: UIButton) {
+        CurrentUser.shared.user?.email = emailTextField.text
+ 
         emailTextField.resignFirstResponder()
         
-        UIView.animate(withDuration: 0.1, animations: {
-            sender.alpha = 0.5
-        }) { (_) in
-            UIView.animate(withDuration: 0.1) {
-                sender.alpha = 1.0
-            }
-        }
+        UIView.animate(withDuration: 0.1, animations: {sender.alpha = 0.5})
+        UIView.animate(withDuration: 0.1, animations: {sender.alpha = 1})
+         
     }
     
 }
