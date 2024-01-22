@@ -59,7 +59,7 @@ extension AboutUsInfoViewController {
         nameLabel.font = UIFont.boldSystemFont(ofSize: 17)
         nameLabel.frame = CGRect(x: 10, y: -8, width: tableView.frame.width - 32, height: 30)
         
-        nameLabel.textColor = .black
+        nameLabel.textColor = .label
         
         contentView.addSubview(nameLabel)
         return contentView

@@ -37,14 +37,14 @@ final class AboutAppTableViewController: UITableViewController {
             if indexPath.row == 0 {
                 content.text = "Cайт"
                 content.textProperties.font = .boldSystemFont(ofSize: 16)
-                content.textProperties.color = .black
+                content.textProperties.color = .label
                 content.secondaryText = infoAboutApp.site
                 cell.contentConfiguration = content
                 return cell
             } else {
                 content.text = "Телефон"
                 content.textProperties.font = .boldSystemFont(ofSize: 16)
-                content.textProperties.color = .black
+                content.textProperties.color = .label
                 content.secondaryText = infoAboutApp.telephone
                 cell.contentConfiguration = content
                 return cell
@@ -54,7 +54,7 @@ final class AboutAppTableViewController: UITableViewController {
             var content = cell.defaultContentConfiguration()
             content.text = "О нас"
             content.textProperties.font = .boldSystemFont(ofSize: 16)
-            content.textProperties.color = .black
+            content.textProperties.color = .label
             cell.contentConfiguration = content
             return cell
         }
