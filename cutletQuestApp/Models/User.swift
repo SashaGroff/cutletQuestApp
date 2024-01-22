@@ -12,12 +12,15 @@ final class User {
     let password: String
     let name: String
     let basket: Cart
+    var needNotifications: Bool
+    var email: String?
     
-    init(login: String, password: String, name: String) {
+    init(login: String, password: String, name: String, needNotifications: Bool = false) {
         self.login = login
         self.password = password
         self.name = name
         self.basket = Cart()
+        self.needNotifications = needNotifications
     }
 }
 
