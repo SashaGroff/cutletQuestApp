@@ -26,6 +26,7 @@ final class QuizViewController: UIViewController {
     private let questions = Question.getQuestions()
     private var answersChosen: [Answer] = []
     private var questionIndex = 0
+    
     private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
@@ -44,13 +45,12 @@ final class QuizViewController: UIViewController {
         resultVC.answers = answersChosen
     }
     
-
+// MARK: - Questions actions
     @IBAction func singleQuestionButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let answer = currentAnswers[buttonIndex]
         answersChosen.append(answer)
         nextQuestion()
-        
     }
     
     @IBAction func multipleQuestionButtonPressed() {
@@ -67,13 +67,13 @@ final class QuizViewController: UIViewController {
         answersChosen.append(currentAnswers[index])
         nextQuestion()
     }
+    
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
-}
 
-private extension QuizViewController {
-    func updateUI() {
+// MARK: - Private methods
+    private func updateUI() {
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
         }
@@ -81,17 +81,15 @@ private extension QuizViewController {
         title = "Вопрос \(questionIndex + 1) из \(questions.count)"
         
         let currentQuestion = questions[questionIndex]
-        
         questionlabel.text = currentQuestion.title
         
         let totalProgress = Float(questionIndex) / Float(questions.count)
-        
         questionProgressView.setProgress(totalProgress, animated: true)
         
         showCurrentAnswers(for: currentQuestion.responseType)
     }
     
-    func showCurrentAnswers(for type: ResponseType) {
+    private func showCurrentAnswers(for type: ResponseType) {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
         case .multiple: showMultipleStackView(with: currentAnswers)
@@ -99,7 +97,7 @@ private extension QuizViewController {
         }
     }
     
-    func showSingleStackView(with answers: [Answer]) {
+    private func showSingleStackView(with answers: [Answer]) {
         singleStackView.isHidden.toggle()
         
         for (button, answer) in zip(singleButtons, answers) {
@@ -107,7 +105,7 @@ private extension QuizViewController {
         }
     }
     
-    func showMultipleStackView(with answers: [Answer]) {
+    private func showMultipleStackView(with answers: [Answer]) {
         multipleStackView.isHidden.toggle()
         
         for (label, answer) in zip(multipleLabels, answers) {
@@ -115,22 +113,20 @@ private extension QuizViewController {
         }
     }
     
-    func showRangedStackView(with answers: [Answer]) {
+    private func showRangedStackView(with answers: [Answer]) {
         rangedStackView.isHidden.toggle()
         
         rangedLabels.first?.text = answers.first?.title
         rangedLabels.last?.text = answers.last?.title
     }
     
-    func nextQuestion() {
+    private func nextQuestion() {
         questionIndex += 1
         
         if questionIndex < questions.count {
             updateUI()
             return
         }
-        
         performSegue(withIdentifier: "showRe", sender: nil)
     }
-    
 }

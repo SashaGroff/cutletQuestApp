@@ -8,18 +8,10 @@
 import UIKit
 
 final class MenuTableViewController: UITableViewController {
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
@@ -27,7 +19,7 @@ final class MenuTableViewController: UITableViewController {
             productCell.configureCell(product: CurrentMenu.shared.products[indexPath.row])
             return productCell
         } else {
-            let quizCell = tableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath) as! QuizTableViewCell
+            let quizCell = tableView.dequeueReusableCell(withIdentifier: "quizCell", for: indexPath) 
             return quizCell
         }
     }

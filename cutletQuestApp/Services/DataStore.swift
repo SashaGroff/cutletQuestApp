@@ -5,8 +5,6 @@
 //  Created by Alexey Solop on 09.01.2024.
 //
 
-import Foundation
-
 final class DataStore {
     static let shared = DataStore()
     
@@ -109,12 +107,6 @@ final class DataStore {
         )
     ]
     
-    var users = [
-        User(login: "+79826543211", password: "123", name: "Alex"),
-        User(login: "+79050019855", password: "123", name: "Rustam"),
-        User(login: "1", password: "1", name: "1")
-    ]
-    
     let developers = [
         Developer(
             fullName: "Александр Гончаров",
@@ -160,6 +152,11 @@ final class DataStore {
         telephone: "89000202100"
     )
     
-    private init() {}
+    var users = [
+        User(login: "+79826543211", password: "123", name: "Alex"),
+        User(login: "+79050019855", password: "123", name: "Rustam"),
+        User(login: "1", password: "1", name: "1")
+    ]
     
+    private init() {}
 }

@@ -21,11 +21,11 @@ final class CartProductCellView: UITableViewCell {
     var product: Product?
     
     @IBAction func stepperChanged(_ sender: UIStepper) {
+        productCountLabel.animate()
         productCountLabel.text = Int(stepperValue.value).description
         
         if let product {
-                    onStepperValueChanged?(sender.value, product)
-                }
+            onStepperValueChanged?(sender.value, product)
+        }
     }
-    
 }

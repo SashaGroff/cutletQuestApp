@@ -2,13 +2,11 @@
 //  AboutApp.swift
 //  cutletQuestApp
 //
-//  Created by Егор Аблогин on 21.01.2024.
+//  Created by Егор Аблогин on 08.01.2024.
 //
 
-import Foundation
-
 struct AboutAppInfo {
-var info: String
-var site: String
-var telephone: String
+    let info: String
+    let site: String
+    let telephone: String
 }

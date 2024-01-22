@@ -33,7 +33,7 @@ final class MenuTableViewCell: UITableViewCell {
         productDescription.text = product.description
         productPrice.text = "\(product.price.formatted())₽"
         
-        let amountInBasket = CurrentUser.shared.user?.basket.getBasket()[product] ?? 0
+        let amountInBasket = CurrentUser.shared.user?.cart.getCart()[product] ?? 0
         productAmmount.text = "X\(amountInBasket)"
         productAmmount.isHidden = amountInBasket == 0
         ammountStepper.value = Double(amountInBasket)
@@ -42,12 +42,12 @@ final class MenuTableViewCell: UITableViewCell {
     private func updateProductAmountInBasket(to amount: Int) {
         guard let product = product  else { return }
         
-        let currentAmount = CurrentUser.shared.user?.basket.getBasket()[product] ?? 0
+        let currentAmount = CurrentUser.shared.user?.cart.getCart()[product] ?? 0
         
         if currentAmount < amount {
-            CurrentUser.shared.user?.basket.addToBasket(product: product)
+            CurrentUser.shared.user?.cart.addToBCart(product: product)
         } else if currentAmount > amount {
-            CurrentUser.shared.user?.basket.removeFromBasket(product: product)
+            CurrentUser.shared.user?.cart.removeFromCart(product: product)
         }
     }
     

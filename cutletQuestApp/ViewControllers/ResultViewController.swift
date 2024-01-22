@@ -8,8 +8,6 @@
 import UIKit
 
 final class ResultViewController: UIViewController {
-
-    
     @IBOutlet var burgerTypeLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
@@ -23,23 +21,19 @@ final class ResultViewController: UIViewController {
         updateResult()
     }
     
-    
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }
     
     @IBAction func addToCartButtonTapped() {
         guard let burgerForCart else {return}
-        CurrentUser.shared.user?.basket.addToBasket(product: burgerForCart)
+        CurrentUser.shared.user?.cart.addToBCart(product: burgerForCart)
         dismiss(animated: true)
     }
-}
 
-extension ResultViewController {
     private func updateResult() {
         var frequencyBurgers: [Burger: Int] = [:]
-        let burgers = answers.map { $0.burger }
-        
+        let burgers = answers.map { $0.product }
         
         for burger in burgers {
             frequencyBurgers[burger, default: 0] += 1

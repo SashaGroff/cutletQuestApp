@@ -16,10 +16,10 @@ struct Question {
                 title: "Какое блюдо вы предпочитаете больше всего?",
                 responseType: .single,
                 answers: [
-                    Answer(title: "Сочное говяжье мясо", burger: .bigBurger),
-                    Answer(title: "Нежная рыбка", burger: .fishBurger),
-                    Answer(title: "Здоровая растительная пища", burger: .veganBurger),
-                    Answer(title: "Домашняя жаренная птичка", burger: .chickenBurger)
+                    Answer(title: "Сочное говяжье мясо", product: .bigBurger),
+                    Answer(title: "Нежная рыбка", product: .fishBurger),
+                    Answer(title: "Здоровая растительная пища", product: .veganBurger),
+                    Answer(title: "Домашняя жаренная птичка", product: .chickenBurger)
                 ]
             ),
             
@@ -27,10 +27,10 @@ struct Question {
                 title: "Выберите ваши любимые специи и приправы:",
                 responseType: .multiple,
                 answers: [
-                    Answer(title: "Карамелизированный лучок!", burger: .bigBurger),
-                    Answer(title: "Таинственный Терияки!", burger: .fishBurger),
-                    Answer(title: "Жаренные грибочки!", burger: .veganBurger),
-                    Answer(title: "Огненные халапеньо!", burger: .chickenBurger)
+                    Answer(title: "Карамелизированный лучок!", product: .bigBurger),
+                    Answer(title: "Таинственный Терияки!", product: .fishBurger),
+                    Answer(title: "Жаренные грибочки!", product: .veganBurger),
+                    Answer(title: "Огненные халапеньо!", product: .chickenBurger)
                 ]
             ),
             
@@ -38,10 +38,10 @@ struct Question {
                 title: "Выберите уровень пикантности (остроты)!",
                 responseType: .ranged,
                 answers: [
-                    Answer(title: "🔥", burger: .veganBurger),
-                    Answer(title: "🔥🔥", burger: .fishBurger),
-                    Answer(title: "🔥🔥🔥", burger: .bigBurger),
-                    Answer(title: "🔥🔥🔥🔥", burger: .chickenBurger)
+                    Answer(title: "🔥", product: .veganBurger),
+                    Answer(title: "🔥🔥", product: .fishBurger),
+                    Answer(title: "🔥🔥🔥", product: .bigBurger),
+                    Answer(title: "🔥🔥🔥🔥", product: .chickenBurger)
                 ]
             )
         ]
@@ -56,11 +56,10 @@ enum ResponseType {
 
 struct Answer {
     let title: String
-    let burger: Burger
+    let product: Burger
 }
 
 enum Burger {
-    
     case chickenBurger
     case veganBurger
     case bigBurger
@@ -69,13 +68,13 @@ enum Burger {
     var menuBurger: Product? {
         switch self {
         case .chickenBurger:
-                return CurrentMenu.shared.products.first(where: {$0.name == "Острый куриный бургер"})
+                CurrentMenu.shared.products.first(where: {$0.name == "Острый куриный бургер"})
         case .veganBurger:
-                return CurrentMenu.shared.products.first(where: {$0.name == "Веганский портобелло-бургер"})
+                CurrentMenu.shared.products.first(where: {$0.name == "Веганский портобелло-бургер"})
         case .bigBurger:
-                return CurrentMenu.shared.products.first(where: {$0.name == "Черный бургер"})
+                CurrentMenu.shared.products.first(where: {$0.name == "Черный бургер"})
         case .fishBurger:
-                return CurrentMenu.shared.products.first(where: {$0.name == "Бургер с лососем Терияки"})
+                CurrentMenu.shared.products.first(where: {$0.name == "Бургер с лососем Терияки"})
         }
     }
 }

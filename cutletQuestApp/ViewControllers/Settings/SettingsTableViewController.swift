@@ -2,50 +2,45 @@
 //  SettingsTableViewController.swift
 //  cutletQuestApp
 //
-//  Created by Natalia Ovdina on 18.01.2024.
+//  Created by Natalia Ovdina on 08.01.2024.
 //
 
 import UIKit
 
 final class SettingsTableViewController: UITableViewController {
-    
-    // MARK: - IB Outlets
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var telephoneTextField: UITextField!
     @IBOutlet var switchParameter: UISwitch!
     
-    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         switchParameter.isOn = false
         
         nameTextField.isUserInteractionEnabled = false
-        telephoneTextField.isUserInteractionEnabled = false
-    
         nameTextField.text = CurrentUser.shared.user?.name
+    
+        telephoneTextField.isUserInteractionEnabled = false
         telephoneTextField.text = CurrentUser.shared.user?.login
     }
-    
-    // MARK: - Override Scroll Method
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }
 }
-// MARK: - UITableViewDelegate
 
+// MARK: - UITableViewDelegate
 extension SettingsTableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let contentView = UIView()
         let label = UILabel()
         
-        switch section {
+        label.text = switch section {
         case 0:
-            label.text = "Мои данные"
+            "Мои данные"
         case 1:
-            label.text = "Уведомления"
+            "Уведомления"
         default:
-            label.text = "Информация"
+            "Информация"
         }
         
         label.font = UIFont.boldSystemFont(ofSize: 18)

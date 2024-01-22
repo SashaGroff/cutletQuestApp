@@ -11,11 +11,6 @@ final class EmailTableViewCell: UITableViewCell {
     
     @IBOutlet var emailTextField: UITextField!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        emailTextField.delegate = self
-    }
-    
     @IBAction func buttonEmailAction(_ sender: UIButton) {
         CurrentUser.shared.user?.email = emailTextField.text
  
@@ -23,12 +18,10 @@ final class EmailTableViewCell: UITableViewCell {
         
         UIView.animate(withDuration: 0.1, animations: {sender.alpha = 0.5})
         UIView.animate(withDuration: 0.1, animations: {sender.alpha = 1})
-         
     }
-    
 }
-// MARK: - UITextFieldDelegate
 
+// MARK: - UITextFieldDelegate
 extension EmailTableViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

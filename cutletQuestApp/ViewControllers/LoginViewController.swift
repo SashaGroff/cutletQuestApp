@@ -102,21 +102,34 @@ final class LoginViewController: UIViewController {
         
         let regAction = UIAlertAction(title: "Зарегистрироваться", style: .default) { _ in
             guard let name = alert.textFields?[0].text, !name.isEmpty else {
-                self.showAlert(withTitle: "Ошибка", andMessage: "Пожалуйста, введите ваше имя.")
+                self.showAlert(
+                    withTitle: "Ошибка",
+                    andMessage: "Пожалуйста, введите ваше имя."
+                )
                 return
             }
             
             guard let login = alert.textFields?[1].text, !login.isEmpty else {
-                self.showAlert(withTitle: "Ошибка", andMessage: "Пожалуйста, введите номер телефона.")
+                self.showAlert(
+                    withTitle: "Ошибка",
+                    andMessage: "Пожалуйста, введите номер телефона."
+                )
                 return
             }
             
             guard let password = alert.textFields?[2].text, !password.isEmpty else {
-                self.showAlert(withTitle: "Ошибка", andMessage: "Пожалуйста, введите пароль.")
+                self.showAlert(
+                    withTitle: "Ошибка",
+                    andMessage: "Пожалуйста, введите пароль."
+                )
                 return
             }
             
-            _ = SessionManager.shared.createUser(login: login, password: password, name: name)
+            SessionManager.shared.createUser(
+                login: login,
+                password: password,
+                name: name
+            )
         }
         
         alert.addAction(regAction)

@@ -2,16 +2,14 @@
 //  AboutUsInfoViewController.swift
 //  cutletQuestApp
 //
-//  Created by Natalia Ovdina on 18.01.2024.
+//  Created by Natalia Ovdina on 08.01.2024.
 //
 
 import UIKit
 
 final class AboutUsInfoViewController: UITableViewController {
-
     private let developers = DataStore.shared.developers
     
-    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 90
@@ -19,7 +17,6 @@ final class AboutUsInfoViewController: UITableViewController {
 }
 
 // MARK: - UITableViewDataSource
-
 extension AboutUsInfoViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
@@ -48,7 +45,6 @@ extension AboutUsInfoViewController {
 }
 
 // MARK: - UITableViewDelegate
-
 extension AboutUsInfoViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let contentView = UIView()

@@ -7,13 +7,7 @@
 
 import UIKit
 
-class OrderViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
+final class OrderViewController: UIViewController {
     @IBAction func backButtonTapped() {
         dismiss(animated: true)
     }

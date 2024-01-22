@@ -8,10 +8,10 @@
 import Foundation
 
 struct Product: Equatable, Hashable {
-    var name: String
-    var price: Int
-    var pictureURL: String
-    var description: String
+    let name: String
+    let price: Int
+    let pictureURL: String
+    let description: String
 }
 
 struct Menu {

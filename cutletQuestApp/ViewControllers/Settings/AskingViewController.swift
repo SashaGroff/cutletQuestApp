@@ -8,9 +8,7 @@
 import UIKit
 
 final class AskingViewController: UIViewController, UITextViewDelegate {
-    
     @IBOutlet var textView: UITextView!
-    
     
     @IBAction func tappedButton() {
         if textView.text == "" {
@@ -31,8 +29,10 @@ final class AskingViewController: UIViewController, UITextViewDelegate {
         dismiss(animated: true)
     }
     
-    
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
     
     // MARK: - Private Method Alert
     private func showAlert(
@@ -51,21 +51,5 @@ final class AskingViewController: UIViewController, UITextViewDelegate {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
 }
-
-// MARK: - UITextViewDelegate
-
-extension AskingViewController {
-    func textView(
-        _ textView: UITextView,
-        shouldChangeTextIn range: NSRange,
-        replacementText text: String
-    ) -> Bool {
-        if (text == "\n") {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
-}
+ 

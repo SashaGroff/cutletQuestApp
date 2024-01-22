@@ -7,7 +7,10 @@
 
 import UIKit
 
-class QuizTableViewCell: UITableViewCell {
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-}
+/*
+ final class QuizTableViewCell: UITableViewCell {
+ @IBOutlet var nameLabel: UILabel!
+ @IBOutlet var descriptionLabel: UILabel!
+ }
+ 
+ */

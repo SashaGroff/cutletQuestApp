@@ -17,11 +17,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UIView.appearance().tintColor = .systemOrange
         UIBarButtonItem.appearance().tintColor = .systemOrange
         
-        
         UIButton.appearance().titleLabel?.font = UIFont(name: "System", size: 17)
-        
-
-        
+          
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.backgroundColor = .systemGray5
        // tabBarAppearance.configureWithOpaqueBackground()
@@ -31,23 +28,18 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
     func sceneDidDisconnect(_ scene: UIScene) {
-      
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-     
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-      
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        
     }
 
 
