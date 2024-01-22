@@ -17,10 +17,14 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UIView.appearance().tintColor = .systemOrange
         UIBarButtonItem.appearance().tintColor = .systemOrange
         
+        
         UIButton.appearance().titleLabel?.font = UIFont(name: "System", size: 17)
         
+
+        
         let tabBarAppearance = UITabBarAppearance()
-        tabBarAppearance.configureWithOpaqueBackground()
+        tabBarAppearance.backgroundColor = .systemGray5
+       // tabBarAppearance.configureWithOpaqueBackground()
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
     }
