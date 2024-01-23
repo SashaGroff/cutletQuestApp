@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -148,7 +147,7 @@
                             <constraint firstItem="eHD-21-FIX" firstAttribute="top" secondItem="wer-VD-dRS" secondAttribute="bottom" id="yOy-oJ-wmp"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="2uh-kG-DUm"/>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="cart.fill" catalog="system" id="2uh-kG-DUm"/>
                     <navigationItem key="navigationItem" title="Корзина" id="2pP-xa-dpW"/>
                     <connections>
                         <outlet property="orderButton" destination="8EB-9O-eKg" id="erH-JF-wlX"/>
@@ -197,13 +196,11 @@
             </objects>
             <point key="canvasLocation" x="1811" y="-23"/>
         </scene>
-        <!--Cart-->
+        <!--Navigation Controller-->
         <scene sceneID="0Ya-bA-KAd">
             <objects>
                 <navigationController storyboardIdentifier="CartVC" automaticallyAdjustsScrollViewInsets="NO" id="426-Ic-dz7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cart" id="Uwt-Vq-UQG">
-                        <imageReference key="image" image="cart.fill" catalog="system" variableValue="5.5511151231257827e-17"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" id="Uwt-Vq-UQG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="7q7-2l-FGo">
