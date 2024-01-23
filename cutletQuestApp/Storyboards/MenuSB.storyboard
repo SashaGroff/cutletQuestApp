@@ -143,7 +143,7 @@
                             <outlet property="delegate" destination="C1d-8b-f1V" id="IRg-rG-ycU"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="fork.knife" catalog="system" id="M2h-52-71O"/>
+                    <tabBarItem key="tabBarItem" title="Меню" image="fork.knife" catalog="system" id="M2h-52-71O"/>
                     <navigationItem key="navigationItem" title="Меню" id="rfP-1R-MmC">
                         <barButtonItem key="rightBarButtonItem" title="Проблемки?" id="d9B-A3-xMr">
                             <color key="tintColor" systemColor="systemOrangeColor"/>
@@ -196,10 +196,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
